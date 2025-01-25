@@ -36,15 +36,15 @@ html, body {
 header {
     background-color: #000096;  /* Azul escuro */
     color: #FFFF00;            /* Amarelo */
-    padding: 30px;
+    padding: 40px;
     text-align: center;
     font-family: "eFootballStencil", sans-serif; /* Fonte personalizada */
-    font-size: 1.5em;          /* Aumenta o tamanho da fonte */
+    font-size: 2em;            /* Aumenta o tamanho da fonte */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.0em;          /* Tamanho da fonte do título principal */
+    font-size: 3.0em;          /* Tamanho maior para o título */
     font-family: "eFootballStencil", sans-serif;
 }
 
@@ -52,25 +52,76 @@ header h1 {
 h2 {
     color: #000096;  /* Azul escuro */
     font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
+    font-size: 1.8em; /* Tamanho da fonte do subtítulo */
+    margin-bottom: 15px;
 }
 
+section {
+    display: flex;                /* Usando flexbox para dividir a section em 2 colunas */
+    justify-content: space-between; /* Espaçamento entre as colunas */
+    padding: 20px;                /* Adiciona espaçamento interno */
+}
+
+section .text-content {
+    flex: 1;                      /* Faz o conteúdo de texto ocupar 50% */
+    padding-right: 20px;          /* Espaço à direita do texto */
+}
+
+section .image-content {
+    flex: 1;                      /* Faz a imagem ocupar 50% */
+    background-image: url('caminho/para/sua/imagem.jpg'); /* Altere para o caminho da sua imagem */
+    background-size: cover;       /* Faz a imagem cobrir o espaço da div */
+    background-position: center;  /* Centraliza a imagem */
+    height: 300px;                /* Altura fixa para a imagem */
+}
+
+/* Estilo para os parágrafos dentro da section */
 section p {
     line-height: 1.6;          /* Melhora a legibilidade do texto */
     margin-bottom: 20px;
+    font-size: 1.1em;          /* Ajusta o tamanho da fonte para melhorar a leitura */
 }
 
 /* Classe de contêiner flexível */
 .container {
     flex: 1;                   /* Faz o contêiner crescer e ocupar o espaço restante */
+    padding: 0 20px;           /* Adiciona espaçamento lateral ao contêiner */
 }
 
 /* Estilo do rodapé */
 footer {
     background-color: #333;    /* Fundo preto */
     color: white;              /* Texto branco */
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
-    margin-top: 10px;          /* Espaço entre o conteúdo e o rodapé */
-    font-size: 0.9em;          /* Reduz levemente o tamanho da fonte */
+    margin-top: 20px;          /* Espaço entre o conteúdo e o rodapé */
+    font-size: 1em;            /* Ajuste o tamanho da fonte */
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;  /* Alinha as colunas em uma única coluna em telas pequenas */
+    }
+
+    section .text-content {
+        padding-right: 0;
+    }
+
+    section .image-content {
+        height: 200px;            /* Ajusta a altura da imagem em telas menores */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1em; /* Ajusta o tamanho da fonte em telas menores */
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }
