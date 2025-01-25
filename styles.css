@@ -40,6 +40,8 @@ header {
     text-align: center;
     font-family: "eFootballStencil", sans-serif;
     font-size: 1.5em;
+    z-index: 1;  /* Garante que o cabeçalho fique acima da imagem */
+    position: relative;
 }
 
 header h1 {
@@ -55,6 +57,7 @@ section {
     padding: 20px;
     align-items: center;  /* Centraliza verticalmente */
     height: auto; /* Ajusta a altura da section para caber o conteúdo */
+    position: relative;  /* Permite sobreposição */
 }
 
 section .text-content {
@@ -66,11 +69,14 @@ section .text-content {
 }
 
 section .image-content {
-    flex: 1;
+    position: absolute;  /* Permite sobreposição */
+    right: 0;  /* Coloca a imagem à direita */
+    top: 0;  /* Fixa a imagem no topo */
     background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png');
     background-size: cover;  /* A imagem cobre todo o espaço disponível */
     background-position: center;
-    height: 100%;  /* Altura 100% para se ajustar ao conteúdo */
+    width: 50%;  /* A imagem ocupa 50% do espaço */
+    height: 100%;  /* A imagem ocupa toda a altura da section */
     min-height: 300px;  /* Garante uma altura mínima */
 }
 
@@ -96,6 +102,8 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 20px;
     font-size: 1em;
+    z-index: 1;  /* Garante que o rodapé fique acima da imagem */
+    position: relative;
 }
 
 /* Estilo responsivo para dispositivos móveis */
@@ -110,6 +118,8 @@ footer {
 
     section .image-content {
         height: 200px; /* Ajusta a altura da imagem em telas menores */
+        width: 100%;  /* A imagem ocupa toda a largura em telas menores */
+        position: relative;  /* Para não sobrepor no modo responsivo */
     }
 
     header h1 {
