@@ -1,3 +1,4 @@
+/* Configuração de fontes personalizadas */
 @font-face {
     font-family: "eFootballStencil";
     src: url("https://esportista.github.io/arquivo/fontes/eFootballStencil-Regular.woff") format("woff");
@@ -18,38 +19,58 @@
     font-weight: bold;
     font-style: normal;
 }
-body {
-    font-family: "EmiratesBold", sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+
+/* Estilo global do corpo e layout geral */
+html, body {
+    height: 100%;              /* Garante que o body ocupe 100% da altura da janela */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;    /* Alinha o conteúdo verticalmente */
+    font-family: "EmiratesBold", sans-serif; /* Fonte padrão */
+    background-color: #f4f4f4; /* Cor de fundo */
+    color: #333;               /* Cor principal do texto */
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: #000096;
-    color: #FFFF00;
+    background-color: #000096;  /* Azul escuro */
+    color: #FFFF00;            /* Amarelo */
     padding: 30px;
     text-align: center;
-    font-family: "eFootballStencil", sans-serif;  /* Fonte personalizada para o header */
-    font-size: 1.5em;  /* Aumenta o tamanho da fonte */
+    font-family: "eFootballStencil", sans-serif; /* Fonte personalizada */
+    font-size: 1.5em;          /* Aumenta o tamanho da fonte */
 }
 
-h1 {
+header h1 {
     margin: 0;
-    font-size: 2.0em;
-    font-family: "eFootballStencil", sans-serif;  /* Fonte personalizada para o h1 */
+    font-size: 2.0em;          /* Tamanho da fonte do título principal */
+    font-family: "eFootballStencil", sans-serif;
 }
 
+/* Estilo para as seções */
 h2 {
-    color: #0044cc;
-    font-family: "EmiratesBold", sans-serif;  /* Fonte personalizada para h2 */
+    color: #0044cc;            /* Azul mais claro */
+    font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
 }
 
+section p {
+    line-height: 1.6;          /* Melhora a legibilidade do texto */
+    margin-bottom: 20px;
+}
+
+/* Classe de contêiner flexível */
+.container {
+    flex: 1;                   /* Faz o contêiner crescer e ocupar o espaço restante */
+}
+
+/* Estilo do rodapé */
 footer {
-    background-color: #333;
-    color: white;
-    font-family: "EmiratesBold", sans-serif;
+    background-color: #333;    /* Fundo preto */
+    color: white;              /* Texto branco */
     padding: 10px;
     text-align: center;
+    font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
+    margin-top: 10px;          /* Espaço entre o conteúdo e o rodapé */
+    font-size: 0.9em;          /* Reduz levemente o tamanho da fonte */
 }
