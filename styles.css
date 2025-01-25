@@ -37,7 +37,9 @@ header {
     background-color: #000096;
     color: #FFFF00;
     padding: 40px 20px;
-    text-align: center;
+    display: flex; /* Utiliza flexbox para alinhar a imagem e o texto */
+    justify-content: space-between; /* Coloca o texto à esquerda e a imagem à direita */
+    align-items: center; /* Alinha os itens verticalmente */
     font-family: "eFootballStencil", sans-serif;
     font-size: 2.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,6 +48,19 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    flex: 1; /* Garante que o título ocupe o espaço disponível à esquerda */
+}
+
+header .header-image {
+    width: 50%; /* Reduz a largura da imagem para 50% */
+    max-width: 200px; /* Limita o tamanho máximo da imagem */
+    object-fit: contain; /* Garante que a imagem mantenha a proporção */
+}
+
+/* A imagem do cabeçalho */
+header .header-image img {
+    width: 100%; /* A imagem ocupa toda a largura da div */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Estilo para as seções */
