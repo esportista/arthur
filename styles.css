@@ -1,37 +1,3 @@
-/* Configuração de fontes personalizadas */
-@font-face {
-    font-family: "eFootballStencil";
-    src: url("https://esportista.github.io/arquivo/fontes/eFootballStencil-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "EmiratesBold";
-    src: url("https://esportista.github.io/arquivo/fontes/emirates-bold-v3.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "HeinekenSerif";
-    src: url("https://esportista.github.io/arquivo/fontes/heinekenserif18-bold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Estilo global do corpo e layout geral */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: "EmiratesBold", sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
 /* Estilo do cabeçalho */
 header {
     position: relative;
@@ -47,9 +13,9 @@ header {
 header .header-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 10%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    text-align: left; /* Alinha o texto à esquerda */
     z-index: 2; /* Garante que o texto fique acima da imagem */
     padding: 20px;
 }
@@ -69,8 +35,8 @@ header .header-content p {
 header .header-image img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0; /* Posiciona a imagem no lado direito */
+    width: 60%; /* Ajusta o tamanho da imagem para cobrir parcialmente o cabeçalho */
     height: 100%;
     object-fit: cover; /* Faz a imagem cobrir completamente a área do cabeçalho */
     object-position: center;
