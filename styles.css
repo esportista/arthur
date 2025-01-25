@@ -52,38 +52,42 @@ header h1 {
 section {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Alinha os itens no topo da section */
+    align-items: flex-start;
     padding: 40px 20px;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    gap: 20px; /* Adiciona espaçamento entre os elementos dentro da section */
+    position: relative; /* Necessário para o posicionamento absoluto da imagem */
 }
 
 section .text-content {
-    flex: 2; /* Aumenta o espaço da área de texto */
+    flex: 2;
     padding-right: 20px;
     text-align: justify;
     word-wrap: break-word;
     hyphens: auto;
     font-size: 1.1em;
     line-height: 1.8;
+    z-index: 1; /* Garante que o texto fique acima da imagem */
 }
 
 section .image-content {
-    flex: 1; /* Ajusta o espaço da imagem */
-    height: 300px; /* Define uma altura fixa para a imagem */
-    min-height: 200px;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
+    flex: 1;
+    position: relative; /* Posicionamento do contêiner da imagem */
+    height: 300px; /* Altura mínima da área da imagem */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapassar o contêiner */
 }
 
 section .image-content img {
-    width: 100%; /* Faz a imagem preencher toda a área */
-    height: 100%; /* Ajusta a altura da imagem */
-    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    position: absolute; /* Permite que a imagem ultrapasse o contêiner */
+    top: 0;
+    left: 0;
+    width: auto; /* Mantém o tamanho original da imagem */
+    height: 100%; /* A imagem irá cobrir toda a altura do contêiner */
+    object-fit: cover; /* A imagem irá cobrir o contêiner, cortando as partes excedentes */
+    object-position: center center; /* Garante que a imagem seja centralizada */
+    z-index: 0; /* A imagem ficará atrás do conteúdo textual */
 }
 
 /* Estilo para os parágrafos dentro da section */
@@ -115,22 +119,26 @@ footer {
 /* Estilo responsivo para dispositivos móveis */
 @media (max-width: 768px) {
     section {
-        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
+        flex-direction: column;
+        margin: 10px 0;
         padding: 20px;
     }
 
     section .text-content {
         padding-right: 0;
-        font-size: 1em; /* Ajusta o tamanho da fonte para telas pequenas */
     }
 
     section .image-content {
-        height: 200px; /* Ajusta a altura da imagem em telas menores */
+        height: 200px;
         margin-top: 20px;
     }
 
     header h1 {
         font-size: 2em;
+    }
+
+    section p {
+        font-size: 1em;
     }
 
     footer {
