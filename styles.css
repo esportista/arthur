@@ -80,14 +80,8 @@ section .image-content {
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.5s ease, filter 0.5s ease;
     background-repeat: no-repeat; /* Evita duplicação da imagem */
     background-attachment: fixed; /* Melhor controle do comportamento da imagem */
-}
-
-section .image-content:hover {
-    transform: scale(1.1);
-    filter: brightness(80%);
 }
 
 /* Estilo para os parágrafos dentro da section */
