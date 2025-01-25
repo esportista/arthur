@@ -22,88 +22,90 @@
 
 /* Estilo global do corpo e layout geral */
 html, body {
-    height: 100%;              /* Garante que o body ocupe 100% da altura da janela */
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;    /* Alinha o conteúdo verticalmente */
-    font-family: "EmiratesBold", sans-serif; /* Fonte padrão */
-    background-color: #f4f4f4; /* Cor de fundo */
-    color: #333;               /* Cor principal do texto */
+    flex-direction: column;
+    font-family: "EmiratesBold", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Estilo do cabeçalho */
 header {
-    background-color: #000096;  /* Azul escuro */
-    color: #FFFF00;            /* Amarelo */
+    background-color: #000096;
+    color: #FFFF00;
     padding: 30px;
     text-align: center;
-    font-family: "eFootballStencil", sans-serif; /* Fonte personalizada */
-    font-size: 1.5em;            /* Aumenta o tamanho da fonte */
+    font-family: "eFootballStencil", sans-serif;
+    font-size: 1.5em;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.0em;          /* Tamanho maior para o título */
+    font-size: 2.0em;
     font-family: "eFootballStencil", sans-serif;
 }
 
 /* Estilo para as seções */
 h2 {
-    color: #000096;  /* Azul escuro */
-    font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
-    font-size: 1.8em; /* Tamanho da fonte do subtítulo */
+    color: #000096;
+    font-family: "EmiratesBold", sans-serif;
+    font-size: 1.8em;
     margin-bottom: 15px;
 }
 
 section {
-    display: flex;                /* Usando flexbox para dividir a section em 2 colunas */
-    justify-content: space-between; /* Espaçamento entre as colunas */
-    padding: 20px;                /* Adiciona espaçamento interno */
-    align-items: center;          /* Centraliza verticalmente o conteúdo */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;  /* Centraliza verticalmente */
+    height: auto; /* Ajusta a altura da section para caber o conteúdo */
 }
 
 section .text-content {
-    flex: 1;                      /* Faz o conteúdo de texto ocupar 50% */
-    padding-right: 20px;          /* Espaço à direita do texto */
+    flex: 1;
+    padding-right: 20px;
 }
 
 section .image-content {
-    flex: 1;                      /* Faz a imagem ocupar 50% */
-    background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png'); /* Caminho da imagem */
-    background-size: cover;       /* Faz a imagem cobrir o espaço da div */
-    background-position: center;  /* Centraliza a imagem */
-    height: 300px;                /* Altura fixa para a imagem */
+    flex: 1;
+    background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png');
+    background-size: cover;  /* A imagem cobre todo o espaço disponível */
+    background-position: center;
+    height: 100%;  /* Altura 100% para se ajustar ao conteúdo */
+    min-height: 300px;  /* Garante uma altura mínima */
 }
 
 /* Estilo para os parágrafos dentro da section */
 section p {
-    line-height: 1.6;          /* Melhora a legibilidade do texto */
+    line-height: 1.6;
     margin-bottom: 20px;
-    font-size: 1.1em;          /* Ajusta o tamanho da fonte para melhorar a leitura */
+    font-size: 1.1em;
 }
 
 /* Classe de contêiner flexível */
 .container {
-    flex: 1;                   /* Faz o contêiner crescer e ocupar o espaço restante */
-    padding: 0 20px;           /* Adiciona espaçamento lateral ao contêiner */
+    flex: 1;
+    padding: 0 20px;
 }
 
 /* Estilo do rodapé */
 footer {
-    background-color: #333;    /* Fundo preto */
-    color: white;              /* Texto branco */
+    background-color: #333;
+    color: white;
     padding: 20px;
     text-align: center;
-    font-family: "EmiratesBold", sans-serif; /* Fonte personalizada */
-    margin-top: 20px;          /* Espaço entre o conteúdo e o rodapé */
-    font-size: 1em;            /* Ajuste o tamanho da fonte */
+    font-family: "EmiratesBold", sans-serif;
+    margin-top: 20px;
+    font-size: 1em;
 }
 
 /* Estilo responsivo para dispositivos móveis */
 @media (max-width: 768px) {
     section {
-        flex-direction: column;  /* Alinha as colunas em uma única coluna em telas pequenas */
+        flex-direction: column;  /* Organiza o conteúdo em uma única coluna */
     }
 
     section .text-content {
@@ -111,7 +113,7 @@ footer {
     }
 
     section .image-content {
-        height: 200px;            /* Ajusta a altura da imagem em telas menores */
+        height: 200px; /* Ajusta a altura da imagem em telas menores */
     }
 
     header h1 {
@@ -119,7 +121,7 @@ footer {
     }
 
     section p {
-        font-size: 1em; /* Ajusta o tamanho da fonte em telas menores */
+        font-size: 1em;
     }
 
     footer {
