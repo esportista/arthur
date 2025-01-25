@@ -1,5 +1,32 @@
+@font-face {
+    font-family: "BudweiserSerif";
+    src: url("https://seuusuario.github.io/fonte/fontes/BudweiserSerif-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "eFootballStencil";
+    src: url("https://seuusuario.github.io/fonte/fontes/eFootballStencil-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EmiratesBold";
+    src: url("https://seuusuario.github.io/fonte/fontes/emirates-bold-v3.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HeinekenSerif";
+    src: url("https://seuusuario.github.io/fonte/fontes/heinekenserif18-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: "BudweiserSerif", Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -11,15 +38,18 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    font-family: "eFootballStencil", sans-serif;  /* Fonte personalizada para o header */
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
+    font-family: "EmiratesBold", sans-serif;  /* Fonte personalizada para o h1 */
 }
 
 h2 {
     color: #0044cc;
+    font-family: "HeinekenSerif", sans-serif;  /* Fonte personalizada para h2 */
 }
 
 footer {
