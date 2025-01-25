@@ -22,7 +22,7 @@ body {
     font-family: "EmiratesBold", sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    /* margin: 0; */
+    margin: 0;
     /* padding: 0; */
 }
 
@@ -37,7 +37,7 @@ header {
 
 h1 {
     /* margin: 0; */
-    font-size: 1.5em;
+    font-size: 1.0em;
     font-family: "eFootballStencil", sans-serif;  /* Fonte personalizada para o h1 */
 }
 
