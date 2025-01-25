@@ -41,6 +41,7 @@ header {
     text-align: center;
     font-family: "eFootballStencil", sans-serif;
     font-size: 1.5em;
+    z-index: 1; /* Garante que o cabeçalho fique acima da imagem */
 }
 
 header h1 {
@@ -75,12 +76,12 @@ section .text-content {
 section .image-content {
     position: absolute;
     right: 0;  /* Coloca a imagem no lado direito */
-    top: 0;    /* Alinha a imagem ao topo da section */
+    top: 0;    /* Alinha a imagem ao topo da página */
     background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png');
     background-size: cover;
     background-position: center;
-    width: 50%;   /* Faz a imagem ocupar metade da largura da section */
-    height: 100%;  /* A altura da imagem será 100% da section */
+    width: 50%;   /* Faz a imagem ocupar metade da largura da page */
+    height: 100%;  /* A altura da imagem será 100% da tela */
     min-height: 300px;  /* Garante uma altura mínima para a imagem */
     z-index: -1;  /* Garante que a imagem fique atrás do conteúdo */
 }
@@ -96,6 +97,8 @@ section p {
 .container {
     flex: 1;
     padding: 0 20px;
+    position: relative; /* Necessário para o posicionamento do conteúdo */
+    z-index: 2; /* Coloca o conteúdo acima da imagem */
 }
 
 /* Estilo do rodapé */
@@ -107,7 +110,8 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 20px;
     font-size: 1em;
-    z-index: 0; /* Garante que o rodapé fique abaixo da imagem */
+    position: relative;  /* Para garantir que o rodapé não seja coberto */
+    z-index: 1; /* Coloca o rodapé acima da imagem */
 }
 
 /* Estilo responsivo para dispositivos móveis */
