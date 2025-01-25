@@ -36,16 +36,18 @@ html, body {
 header {
     background-color: #000096;
     color: #FFFF00;
-    padding: 40px 20px;
+    padding: 20px 20px; /* Reduzi o padding superior e inferior */
     text-align: center;
     font-family: "eFootballStencil", sans-serif;
     font-size: 2.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.2; /* Ajusta a altura da linha para reduzir o espaçamento */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    line-height: 1.1; /* Ajusta o espaçamento entre as linhas do título */
 }
 
 /* Estilo para as seções */
@@ -109,31 +111,4 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 40px;
     font-size: 1em;
-    border-top: 4px solid #FFFF00; /* Borda superior para destacar */
-}
-
-/* Estilo responsivo para dispositivos móveis */
-@media (max-width: 768px) {
-    section {
-        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
-        padding: 20px;
-    }
-
-    section .text-content {
-        padding-right: 0;
-        font-size: 1em; /* Ajusta o tamanho da fonte para telas pequenas */
-    }
-
-    section .image-content {
-        height: 200px; /* Ajusta a altura da imagem em telas menores */
-        margin-top: 20px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    footer {
-        font-size: 0.9em;
-    }
-}
+    border-top: 4px solid #FFFF00; /* Borda superior para
