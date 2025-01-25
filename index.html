@@ -1,19 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esportista - Página Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header id="header">
+    <div class="logo">
+        <h1>Nome do Esportista</h1>
+    </div>
+</header>
+
+<section id="sobre">
+    <div class="container">
+        <h2>Sobre o Esportista</h2>
+        <p>Biografia do esportista...</p>
+    </div>
+</section>
+
 <section id="conquistas">
     <div class="container">
         <h2>Conquistas</h2>
-        <ul>
-            <li>
+        <div class="cards">
+            <div class="card">
                 <h3>Conquista 1</h3>
-                <p>Descrição da conquista número 1 do esportista.</p>
-            </li>
-            <li>
+                <p>Descrição da conquista...</p>
+            </div>
+            <div class="card">
                 <h3>Conquista 2</h3>
-                <p>Descrição da conquista número 2 do esportista.</p>
-            </li>
-            <li>
-                <h3>Conquista 3</h3>
-                <p>Descrição da conquista número 3 do esportista.</p>
-            </li>
-        </ul>
+                <p>Descrição da conquista...</p>
+            </div>
+        </div>
     </div>
 </section>
+
+<section id="contato">
+    <div class="container">
+        <h2>Contato</h2>
+        <form id="form-contato">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Nome do Esportista | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
