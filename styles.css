@@ -43,9 +43,7 @@ header {
     font-family: "eFootballStencil", sans-serif;
     font-size: 2.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
-    border-radius: 8px; /* Bordas arredondadas */
+    width: 70%; /* Cabeçalho ocupa 70% da largura */
 }
 
 header h1 {
@@ -54,32 +52,19 @@ header h1 {
     flex: 1;
 }
 
-header .header-image {
-    width: 50%;
-    max-width: 200px;
-}
-
-header .header-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
 /* Container para o conteúdo geral */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Divide o conteúdo em duas colunas */
     padding: 40px 20px;
 }
 
 /* Section 1 - Lado esquerdo */
 section.about {
-    width: 70%;
+    width: 70%; /* Section1 ocupa 70% da largura */
     display: flex;
     flex-direction: column;
     padding-right: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
-    border-radius: 8px;
 }
 
 section.about .text-content {
@@ -90,12 +75,11 @@ section.about .text-content {
 
 /* Section 2 - Lado direito */
 section.section2 {
-    width: 30%;
+    width: 30%; /* Section2 ocupa 30% da largura */
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda sutil */
 }
 
 section.section2 p {
@@ -127,11 +111,6 @@ footer {
         flex-direction: column; /* Coloca a imagem abaixo do texto */
         align-items: center;
         text-align: center;
-    }
-
-    header .header-image {
-        width: 100%;
-        margin-top: 20px;
     }
 
     section.about {
