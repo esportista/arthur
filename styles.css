@@ -52,16 +52,17 @@ header h1 {
 section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens no topo da section */
     padding: 40px 20px;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Adiciona espaçamento entre os elementos dentro da section */
 }
 
 section .text-content {
-    flex: 1;
+    flex: 2; /* Aumenta o espaço da área de texto */
     padding-right: 20px;
     text-align: justify;
     word-wrap: break-word;
@@ -71,13 +72,18 @@ section .text-content {
 }
 
 section .image-content {
-    flex: 1;
-    /* Remover a imagem de fundo */
-    height: 100%;
-    min-height: 300px;
+    flex: 1; /* Ajusta o espaço da imagem */
+    height: 300px; /* Define uma altura fixa para a imagem */
+    min-height: 200px;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
+}
+
+section .image-content img {
+    width: 100%; /* Faz a imagem preencher toda a área */
+    height: 100%; /* Ajusta a altura da imagem */
+    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
 }
 
 /* Estilo para os parágrafos dentro da section */
@@ -109,26 +115,22 @@ footer {
 /* Estilo responsivo para dispositivos móveis */
 @media (max-width: 768px) {
     section {
-        flex-direction: column;
-        margin: 10px 0;
+        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
         padding: 20px;
     }
 
     section .text-content {
         padding-right: 0;
+        font-size: 1em; /* Ajusta o tamanho da fonte para telas pequenas */
     }
 
     section .image-content {
-        height: 200px;
+        height: 200px; /* Ajusta a altura da imagem em telas menores */
         margin-top: 20px;
     }
 
     header h1 {
         font-size: 2em;
-    }
-
-    section p {
-        font-size: 1em;
     }
 
     footer {
