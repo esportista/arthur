@@ -34,45 +34,46 @@ html, body {
 
 /* Estilo do cabeçalho */
 header {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Definindo uma altura fixa para o cabeçalho */
     background-color: #000096;
     color: #FFFF00;
-    padding: 40px 20px;
-    text-align: center;
-    font-family: "eFootballStencil", sans-serif;
-    font-size: 2.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Necessário para o posicionamento absoluto da imagem */
-}
-
-header .header-image {
-    position: absolute; /* A imagem vai se sobrepor ao cabeçalho */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-    z-index: -1; /* A imagem ficará atrás do texto */
 }
 
+/* Contêiner do conteúdo do cabeçalho */
+header .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Garante que o texto fique acima da imagem */
+    padding: 20px;
+}
+
+header .header-content h1 {
+    font-family: "eFootballStencil", sans-serif;
+    font-size: 3em;
+    margin: 0;
+}
+
+header .header-content p {
+    font-family: "EmiratesBold", sans-serif;
+    font-size: 1.2em;
+}
+
+/* Estilo da imagem do cabeçalho */
 header .header-image img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-/* Estilo do conteúdo do cabeçalho */
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    z-index: 1; /* O texto ficará acima da imagem */
-}
-
-header p {
-    z-index: 1; /* O texto ficará acima da imagem */
+    object-fit: cover; /* Faz a imagem cobrir completamente a área do cabeçalho */
+    object-position: center;
 }
 
 /* Estilo para as seções */
@@ -117,7 +118,11 @@ footer {
 
 /* Estilo responsivo para dispositivos móveis */
 @media (max-width: 768px) {
-    header h1 {
+    header {
+        height: 250px; /* Reduzir a altura do cabeçalho em telas menores */
+    }
+
+    header .header-content h1 {
         font-size: 2em;
     }
 
@@ -125,10 +130,6 @@ footer {
         flex-direction: column;
         margin: 10px 0;
         padding: 20px;
-    }
-
-    section .text-content {
-        padding-right: 0;
     }
 
     footer {
