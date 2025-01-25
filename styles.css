@@ -30,7 +30,6 @@ html, body {
     font-family: "EmiratesBold", sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    position: relative; /* Permite o posicionamento absoluto de elementos dentro do body */
 }
 
 /* Estilo do cabeçalho */
@@ -41,7 +40,6 @@ header {
     text-align: center;
     font-family: "eFootballStencil", sans-serif;
     font-size: 1.5em;
-    z-index: 1; /* Garante que o cabeçalho fique acima da imagem */
 }
 
 header h1 {
@@ -63,9 +61,7 @@ section {
     justify-content: space-between;
     padding: 20px;
     align-items: center;  /* Centraliza verticalmente */
-    height: auto;
-    position: relative; /* Necessário para o posicionamento da imagem */
-    z-index: 1; /* Garantir que o conteúdo da section fique sobre a imagem */
+    height: auto; /* Ajusta a altura da section para caber o conteúdo */
 }
 
 section .text-content {
@@ -74,16 +70,12 @@ section .text-content {
 }
 
 section .image-content {
-    position: absolute;
-    right: 0;  /* Coloca a imagem no lado direito */
-    top: 0;    /* Alinha a imagem ao topo da página */
+    flex: 1;
     background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png');
-    background-size: cover;
+    background-size: cover;  /* A imagem cobre todo o espaço disponível */
     background-position: center;
-    width: 50%;   /* Faz a imagem ocupar metade da largura da page */
-    height: 100%;  /* A altura da imagem será 100% da tela */
-    min-height: 300px;  /* Garante uma altura mínima para a imagem */
-    z-index: -1;  /* Garante que a imagem fique atrás do conteúdo */
+    height: 100%;  /* Altura 100% para se ajustar ao conteúdo */
+    min-height: 300px;  /* Garante uma altura mínima */
 }
 
 /* Estilo para os parágrafos dentro da section */
@@ -97,8 +89,6 @@ section p {
 .container {
     flex: 1;
     padding: 0 20px;
-    position: relative; /* Necessário para o posicionamento do conteúdo */
-    z-index: 2; /* Coloca o conteúdo acima da imagem */
 }
 
 /* Estilo do rodapé */
@@ -110,8 +100,6 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 20px;
     font-size: 1em;
-    position: relative;  /* Para garantir que o rodapé não seja coberto */
-    z-index: 1; /* Coloca o rodapé acima da imagem */
 }
 
 /* Estilo responsivo para dispositivos móveis */
@@ -126,9 +114,6 @@ footer {
 
     section .image-content {
         height: 200px; /* Ajusta a altura da imagem em telas menores */
-        width: 100%;   /* A imagem ocupa toda a largura da section em telas pequenas */
-        position: relative;  /* Remove o posicionamento absoluto em telas pequenas */
-        top: auto;
     }
 
     header h1 {
