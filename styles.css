@@ -36,18 +36,16 @@ html, body {
 header {
     background-color: #000096;
     color: #FFFF00;
-    padding: 20px 20px; /* Reduzi o padding superior e inferior */
+    padding: 40px 20px;
     text-align: center;
     font-family: "eFootballStencil", sans-serif;
     font-size: 2.2em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    line-height: 1.2; /* Ajusta a altura da linha para reduzir o espaçamento */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    line-height: 1.1; /* Ajusta o espaçamento entre as linhas do título */
 }
 
 /* Estilo para as seções */
@@ -61,6 +59,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     gap: 20px; /* Adiciona espaçamento entre os elementos dentro da section */
+    position: relative; /* Adiciona contexto para o z-index */
 }
 
 section .text-content {
@@ -71,6 +70,7 @@ section .text-content {
     hyphens: auto;
     font-size: 1.1em;
     line-height: 1.8;
+    z-index: 1; /* Garante que o texto fique abaixo da imagem */
 }
 
 section .image-content {
@@ -78,14 +78,19 @@ section .image-content {
     height: 300px; /* Define uma altura fixa para a imagem */
     min-height: 200px;
     border-radius: 8px;
-    position: relative;
+    position: relative; /* Permite o uso de z-index */
     overflow: hidden;
+    z-index: 2; /* Coloca a imagem na frente de todos os outros elementos */
 }
 
 section .image-content img {
     width: 100%; /* Faz a imagem preencher toda a área */
     height: 100%; /* Ajusta a altura da imagem */
     object-fit: cover; /* Corta a imagem para preencher sem distorcer */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3; /* Garante que a imagem fique à frente do conteúdo da seção */
 }
 
 /* Estilo para os parágrafos dentro da section */
@@ -111,4 +116,31 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 40px;
     font-size: 1em;
-    border-top: 4px solid #FFFF00; /* Borda superior para
+    border-top: 4px solid #FFFF00; /* Borda superior para destacar */
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column; /* Organiza os itens verticalmente em telas menores */
+        padding: 20px;
+    }
+
+    section .text-content {
+        padding-right: 0;
+        font-size: 1em; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
+
+    section .image-content {
+        height: 200px; /* Ajusta a altura da imagem em telas menores */
+        margin-top: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
