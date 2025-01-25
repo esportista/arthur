@@ -69,7 +69,7 @@ section .text-content {
 
 section .image-content {
     flex: 1;                      /* Faz a imagem ocupar 50% */
-    background-image: url('caminho/para/sua/imagem.jpg'); /* Altere para o caminho da sua imagem */
+    background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png'); /* Caminho da imagem */
     background-size: cover;       /* Faz a imagem cobrir o espaço da div */
     background-position: center;  /* Centraliza a imagem */
     height: 300px;                /* Altura fixa para a imagem */
