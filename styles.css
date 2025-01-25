@@ -30,6 +30,7 @@ html, body {
     font-family: "EmiratesBold", sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    position: relative; /* Permite o posicionamento absoluto de elementos dentro do body */
 }
 
 /* Estilo do cabeçalho */
@@ -61,7 +62,9 @@ section {
     justify-content: space-between;
     padding: 20px;
     align-items: center;  /* Centraliza verticalmente */
-    height: auto; /* Ajusta a altura da section para caber o conteúdo */
+    height: auto;
+    position: relative; /* Necessário para o posicionamento da imagem */
+    z-index: 1; /* Garantir que o conteúdo da section fique sobre a imagem */
 }
 
 section .text-content {
@@ -70,12 +73,16 @@ section .text-content {
 }
 
 section .image-content {
-    flex: 1;
+    position: absolute;
+    right: 0;  /* Coloca a imagem no lado direito */
+    top: 0;    /* Alinha a imagem ao topo da section */
     background-image: url('https://esportista.github.io/arquivo/imagens/Arthur.png');
-    background-size: cover;  /* A imagem cobre todo o espaço disponível */
+    background-size: cover;
     background-position: center;
-    height: 100%;  /* Altura 100% para se ajustar ao conteúdo */
-    min-height: 300px;  /* Garante uma altura mínima */
+    width: 50%;   /* Faz a imagem ocupar metade da largura da section */
+    height: 100%;  /* A altura da imagem será 100% da section */
+    min-height: 300px;  /* Garante uma altura mínima para a imagem */
+    z-index: -1;  /* Garante que a imagem fique atrás do conteúdo */
 }
 
 /* Estilo para os parágrafos dentro da section */
@@ -100,6 +107,7 @@ footer {
     font-family: "EmiratesBold", sans-serif;
     margin-top: 20px;
     font-size: 1em;
+    z-index: 0; /* Garante que o rodapé fique abaixo da imagem */
 }
 
 /* Estilo responsivo para dispositivos móveis */
@@ -114,6 +122,9 @@ footer {
 
     section .image-content {
         height: 200px; /* Ajusta a altura da imagem em telas menores */
+        width: 100%;   /* A imagem ocupa toda a largura da section em telas pequenas */
+        position: relative;  /* Remove o posicionamento absoluto em telas pequenas */
+        top: auto;
     }
 
     header h1 {
