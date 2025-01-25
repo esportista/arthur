@@ -1,11 +1,4 @@
 @font-face {
-    font-family: "BudweiserSerif";
-    src: url("https://esportista.github.io/fonte/fontes/BudweiserSerif-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "eFootballStencil";
     src: url("https://esportista.github.io/fonte/fontes/eFootballStencil-Regular.woff") format("woff");
     font-weight: normal;
@@ -26,7 +19,7 @@
     font-style: normal;
 }
 body {
-    font-family: "BudweiserSerif", Arial, sans-serif;
+    font-family: "EmiratesBold", sans-serif;
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
@@ -44,16 +37,16 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    font-family: "EmiratesBold", sans-serif;  /* Fonte personalizada para o h1 */
+    font-family: "eFootballStencil", sans-serif;  /* Fonte personalizada para o h1 */
 }
 
 h2 {
     color: #0044cc;
-    font-family: "HeinekenSerif", sans-serif;  /* Fonte personalizada para h2 */
+    font-family: "EmiratesBold", sans-serif;  /* Fonte personalizada para h2 */
 }
 
 footer {
-    font-family: "BudweiserSerif", Arial, sans-serif;
+    font-family: "EmiratesBold", sans-serif;
     background-color: #333;
     color: white;
     padding: 10px;
