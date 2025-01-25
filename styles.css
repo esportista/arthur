@@ -60,6 +60,7 @@ section {
     display: flex;                /* Usando flexbox para dividir a section em 2 colunas */
     justify-content: space-between; /* Espaçamento entre as colunas */
     padding: 20px;                /* Adiciona espaçamento interno */
+    align-items: center;          /* Centraliza verticalmente o conteúdo */
 }
 
 section .text-content {
