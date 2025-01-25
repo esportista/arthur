@@ -61,6 +61,7 @@ section {
     gap: 20px; /* Adiciona espaçamento entre os elementos dentro da section */
 }
 
+/* Garantir que o texto esteja à esquerda e a imagem à direita */
 section .text-content {
     flex: 2; /* Aumenta o espaço da área de texto */
     padding-right: 20px;
