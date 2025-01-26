@@ -83,7 +83,7 @@ main {
 .image-column {
     flex: 1; /* Ocupa metade do espaço */
     background-size: contain; /* Ajusta a imagem para caber dentro do espaço, sem cortes */
-    background-position: center; /* Centraliza a imagem */
+    background-position: right; /* Alinhamento a direita da imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     border-radius: 10px 0 0 10px; /* Bordas arredondadas apenas no lado esquerdo */
     background-color: #f0f0f0; /* Cor de fundo para espaços vazios (opcional) */
