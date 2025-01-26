@@ -45,6 +45,7 @@ header {
     border-radius: 5px;
     margin-left: auto; /* Empurra o botão para a direita */
     margin-right: 40px; /* Ajusta a distância da borda direita */
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 #theme-button:hover {
@@ -67,12 +68,14 @@ header {
     display: none; /* Lista oculta por padrão */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease; /* Transição suave */
 }
 
 #theme-list li {
     padding: 10px 20px;
     cursor: pointer;
     color: white;
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 #theme-list li:hover {
@@ -111,6 +114,7 @@ main {
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
+    transition: opacity 0.5s ease; /* Transição suave */
 }
 
 .text-content {
@@ -118,6 +122,7 @@ main {
     padding: 20px;
     width: 50%;
     text-align: center;
+    transition: opacity 0.5s ease; /* Transição suave */
 }
 
 #prev-button, #next-button {
@@ -129,6 +134,11 @@ main {
     border: none;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+#prev-button:hover, #next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #prev-button {
@@ -155,8 +165,25 @@ footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
+    transition: opacity 0.3s ease; /* Transição suave */
 }
 
 footer a:hover {
     text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .text-content {
+        width: 90%; /* Aumenta a largura do conteúdo em dispositivos móveis */
+    }
+
+    #theme-button {
+        margin-right: 20px; /* Reduz a margem direita em telas menores */
+    }
+
+    #theme-list {
+        right: 10px; /* Ajusta a posição da lista em telas menores */
+    }
 }
