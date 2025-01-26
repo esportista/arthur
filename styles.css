@@ -1,4 +1,4 @@
-/* Carregando as fontes personalizadas */
+/* Carregando a fonte BudweiserSerif */
 @font-face {
     font-family: 'BudweiserSerif';
     src: url('https://esportista.github.io/arquivo/fontes/BudweiserSerif-Regular.ttf') format('truetype');
@@ -6,47 +6,18 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'eFootballStencil';
-    src: url('https://esportista.github.io/arquivo/fontes/eFootballStencil-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'EmiratesBold';
-    src: url('https://esportista.github.io/arquivo/fontes/emirates-bold-v3.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'HeinekenSerifBold';
-    src: url('https://esportista.github.io/arquivo/fontes/heinekenserif18-bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Aplicando as fontes aos elementos */
+/* Aplicando a fonte BudweiserSerif a todos os elementos */
 body {
     font-family: 'BudweiserSerif', serif;
     line-height: 1.6;
     color: #333;
 }
 
-header {
-    font-family: 'eFootballStencil', sans-serif;
+h1, h2, h3, p, a, .btn {
+    font-family: 'BudweiserSerif', serif;
 }
 
-h1, h2, h3 {
-    font-family: 'EmiratesBold', sans-serif;
-}
-
-p, a, .btn {
-    font-family: 'HeinekenSerifBold', serif;
-}
-
-/* Restante do CSS (mantido igual) */
+/* Estilos gerais */
 header {
     background: #333;
     color: #fff;
@@ -57,6 +28,25 @@ header {
     padding: 0 2rem;
 }
 
+header .logo h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -65,6 +55,16 @@ header {
     align-items: center;
     text-align: center;
     color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
