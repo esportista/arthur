@@ -1,20 +1,20 @@
-/* Carregando a fonte BudweiserSerif */
+/* Carregando a fonte Emirates Bold */
 @font-face {
-    font-family: 'BudweiserSerif';
-    src: url('https://esportista.github.io/arquivo/fontes/BudweiserSerif-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'EmiratesBold';
+    src: url('https://esportista.github.io/arquivo/fontes/emirates-bold-v3.woff2') format('woff2');
+    font-weight: bold;
     font-style: normal;
 }
 
-/* Aplicando a fonte BudweiserSerif a todos os elementos */
+/* Aplicando a fonte Emirates Bold a todos os elementos */
 body {
-    font-family: 'BudweiserSerif', serif;
+    font-family: 'EmiratesBold', sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 h1, h2, h3, p, a, .btn {
-    font-family: 'BudweiserSerif', serif;
+    font-family: 'EmiratesBold', sans-serif;
 }
 
 /* Estilos gerais */
