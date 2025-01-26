@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const themeButton = document.getElementById('theme-button');
     const themeList = document.getElementById('theme-list');
@@ -19,29 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentThemeIndex = 0;
 
+    // Mostrar/ocultar a lista de temas ao clicar no botão
     themeButton.addEventListener('click', function() {
         themeList.classList.toggle('hidden');
     });
 
+    // Fechar a lista e mudar o tema ao clicar em um item da lista
     themeList.addEventListener('click', function(event) {
         if (event.target.tagName === 'LI') {
             const theme = event.target.getAttribute('data-theme');
             currentThemeIndex = themes.findIndex(t => t.title.toLowerCase().replace(/ /g, '-') === theme);
             updateTheme();
-            themeList.classList.add('hidden');
+            themeList.classList.add('hidden'); // Fecha a lista após selecionar um tema
         }
     });
 
+    // Navegar para o tema anterior
     prevButton.addEventListener('click', function() {
         currentThemeIndex = (currentThemeIndex - 1 + themes.length) % themes.length;
         updateTheme();
     });
 
+    // Navegar para o próximo tema
     nextButton.addEventListener('click', function() {
         currentThemeIndex = (currentThemeIndex + 1) % themes.length;
         updateTheme();
     });
 
+    // Atualizar o tema exibido
     function updateTheme() {
         // Remove todas as classes de tema anteriores
         mainContent.classList.remove(...themes.map(t => t.class));
