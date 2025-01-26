@@ -79,13 +79,15 @@ nav ul li a:hover::after {
 
 /* Estilos da seção Hero */
 .hero {
-    background: url('https://esportista.github.io/arquivo/imagens/Arthur.png') no-repeat center center/cover;
-    height: 100vh; /* Tamanho da imagem */
+    background: url('https://esportista.github.io/arquivo/imagens/Arthur.png') no-repeat center center;
+    background-size: contain; /* Ajusta a imagem para caber sem cortes */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #333;
+    background-color: #f4f4f4; /* Cor de fundo caso a imagem não cubra toda a área */
 }
 
 .hero-content h2 {
