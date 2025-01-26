@@ -20,7 +20,7 @@ h1, h2, h3, p, a, .btn {
 /* Estilos gerais */
 header {
     background: #000096;
-    color: #fff;
+    color: #ffff00;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
