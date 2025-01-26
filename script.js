@@ -6,17 +6,17 @@ const themeTitle = document.getElementById("theme-title");
 const themeDescription = document.getElementById("theme-description");
 
 const themes = [
-    { title: "Sobre Mim", description: "Aqui vai o texto sobre mim." },
-    { title: "Carreira", description: "Aqui vai o texto sobre minha carreira." },
-    { title: "Conquistas", description: "Aqui vai o texto sobre minhas conquistas." },
-    { title: "Marcas em que Acredito", description: "Aqui vai o texto sobre as marcas em que acredito." },
-    { title: "Inspirações", description: "Aqui vai o texto sobre minhas inspirações." },
-    { title: "Vídeos", description: "Aqui vai o texto sobre meus vídeos." }
+    { title: "Sobre Mim", description: "Aqui vai o texto sobre mim.", backgroundImage: "url('https://exemplo.com/sobre-mim.jpg')" },
+    { title: "Carreira", description: "Aqui vai o texto sobre minha carreira.", backgroundImage: "url('https://exemplo.com/carreira.jpg')" },
+    { title: "Conquistas", description: "Aqui vai o texto sobre minhas conquistas.", backgroundImage: "url('https://exemplo.com/conquistas.jpg')" },
+    { title: "Marcas em que Acredito", description: "Aqui vai o texto sobre as marcas em que acredito.", backgroundImage: "url('https://exemplo.com/marcas.jpg')" },
+    { title: "Inspirações", description: "Aqui vai o texto sobre minhas inspirações.", backgroundImage: "url('https://exemplo.com/inspiracoes.jpg')" },
+    { title: "Vídeos", description: "Aqui vai o texto sobre meus vídeos.", backgroundImage: "url('https://exemplo.com/videos.jpg')" }
 ];
 
 let currentThemeIndex = 0; // Índice do tema atual
 
-// Função para atualizar o título e a descrição com transição suave
+// Função para atualizar o título, a descrição e a imagem de fundo com transição suave
 function updateContent() {
     const theme = themes[currentThemeIndex];
 
@@ -29,6 +29,9 @@ function updateContent() {
         themeDescription.textContent = theme.description;
         themeTitle.style.opacity = 1;
         themeDescription.style.opacity = 1;
+
+        // Atualiza a imagem de fundo
+        document.querySelector('.background-image').style.backgroundImage = theme.backgroundImage;
     }, 300); // 300ms de duração da transição
 }
 
