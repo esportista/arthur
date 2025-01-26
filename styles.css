@@ -1,6 +1,9 @@
+/* Importa fonte personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -40,12 +43,14 @@ header {
     display: none; /* Lista oculta por padrão */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
 }
 
 #theme-list li {
     padding: 10px 20px;
     cursor: pointer;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
 #theme-list li:hover {
@@ -81,7 +86,9 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('background.jpg'); /* Substitua pelo seu arquivo */
     background-size: cover;
+    background-position: center;
     opacity: 0.5;
     z-index: -1;
 }
@@ -102,6 +109,12 @@ main {
     border: none;
     padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+#prev-button:hover, #next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
 }
 
 #prev-button {
