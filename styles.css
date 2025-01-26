@@ -31,44 +31,13 @@ header {
     height: 50px;
 }
 
-/* Botão de Listar Temas */
-#theme-button {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espaçamento entre a imagem e o texto */
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-left: auto; /* Empurra o botão para a direita */
-    margin-right: 40px; /* Ajusta a distância da borda direita */
-    transition: background-color 0.3s ease; /* Transição suave */
-}
-
-#theme-button:hover {
-    background-color: #555;
-}
-
-.button-icon {
-    width: 20px; /* Ajuste o tamanho da imagem */
-    height: 20px;
-}
-
+/* Menu de Temas */
 #theme-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #444;
-    display: none; /* Lista oculta por padrão */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease; /* Transição suave */
+    display: flex; /* Exibe os itens em linha */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
 #theme-list li {
@@ -80,10 +49,6 @@ header {
 
 #theme-list li:hover {
     background-color: #555;
-}
-
-.hidden {
-    display: none; /* Classe para ocultar a lista */
 }
 
 /* Main Content */
@@ -179,11 +144,11 @@ footer a:hover {
         width: 90%; /* Aumenta a largura do conteúdo em dispositivos móveis */
     }
 
-    #theme-button {
-        margin-right: 20px; /* Reduz a margem direita em telas menores */
+    #theme-list {
+        gap: 10px; /* Reduz o espaçamento entre os itens em telas menores */
     }
 
-    #theme-list {
-        right: 10px; /* Ajusta a posição da lista em telas menores */
+    #theme-list li {
+        padding: 10px; /* Reduz o padding em telas menores */
     }
 }
