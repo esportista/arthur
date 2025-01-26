@@ -31,7 +31,9 @@ function updateContent() {
         themeDescription.style.opacity = 1;
 
         // Atualiza a imagem de fundo
-        document.querySelector('.background-image').style.backgroundImage = theme.backgroundImage;
+        const backgroundImageElement = document.querySelector('.background-image');
+        backgroundImageElement.style.backgroundImage = theme.backgroundImage;
+        console.log("Imagem de fundo atualizada:", theme.backgroundImage); // Debug
     }, 300); // 300ms de duração da transição
 }
 
