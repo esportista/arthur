@@ -1,53 +1,78 @@
 // Obtendo os elementos
 const themeButton = document.getElementById("theme-button");
 const themeList = document.getElementById("theme-list");
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
 
-// Quando o botão for clicado, alterna a visibilidade da lista de temas
+const themes = [
+    { title: "Sobre Mim", description: "Aqui vai o texto sobre mim." },
+    { title: "Carreira", description: "Aqui vai o texto sobre minha carreira." },
+    { title: "Conquistas", description: "Aqui vai o texto sobre minhas conquistas." },
+    { title: "Marcas em que Acredito", description: "Aqui vai o texto sobre as marcas em que acredito." },
+    { title: "Inspirações", description: "Aqui vai o texto sobre minhas inspirações." },
+    { title: "Vídeos", description: "Aqui vai o texto sobre meus vídeos." }
+];
+
+let currentThemeIndex = 0; // Índice do tema atual
+
+// Função para atualizar o título e a descrição
+function updateContent() {
+    const theme = themes[currentThemeIndex];
+    document.getElementById("theme-title").textContent = theme.title;
+    document.getElementById("theme-description").textContent = theme.description;
+}
+
+// Exibir ou ocultar a lista de temas ao clicar no botão
 themeButton.addEventListener("click", () => {
     themeList.classList.toggle("hidden");
 });
 
-// Opcional: Se você quiser mudar o título e descrição conforme o tema selecionado
+// Selecionando um tema ao clicar na lista
 const themeItems = document.querySelectorAll("#theme-list li");
-
 themeItems.forEach(item => {
     item.addEventListener("click", (event) => {
         const theme = event.target.getAttribute("data-theme");
-        const title = document.getElementById("theme-title");
-        const description = document.getElementById("theme-description");
 
-        // Exemplo de alteração de conteúdo baseado no tema selecionado
+        // Atualizando o conteúdo com base no tema selecionado
         switch (theme) {
             case "sobre-mim":
-                title.textContent = "Sobre Mim";
-                description.textContent = "Aqui vai o texto sobre mim.";
+                currentThemeIndex = 0;
                 break;
             case "carreira":
-                title.textContent = "Carreira";
-                description.textContent = "Aqui vai o texto sobre minha carreira.";
+                currentThemeIndex = 1;
                 break;
             case "conquistas":
-                title.textContent = "Conquistas";
-                description.textContent = "Aqui vai o texto sobre minhas conquistas.";
+                currentThemeIndex = 2;
                 break;
             case "marcas":
-                title.textContent = "Marcas em que Acredito";
-                description.textContent = "Aqui vai o texto sobre as marcas em que acredito.";
+                currentThemeIndex = 3;
                 break;
             case "inspiracoes":
-                title.textContent = "Inspirações";
-                description.textContent = "Aqui vai o texto sobre minhas inspirações.";
+                currentThemeIndex = 4;
                 break;
             case "videos":
-                title.textContent = "Vídeos";
-                description.textContent = "Aqui vai o texto sobre meus vídeos.";
+                currentThemeIndex = 5;
                 break;
-            default:
-                title.textContent = "Tema";
-                description.textContent = "Texto do tema.";
         }
-
-        // Oculta a lista após a seleção de um tema
-        themeList.classList.add("hidden");
+        updateContent();  // Atualizando o conteúdo da página
+        themeList.classList.add("hidden");  // Ocultando a lista
     });
 });
+
+// Navegação com as setas
+prevButton.addEventListener("click", () => {
+    if (currentThemeIndex > 0) {
+        currentThemeIndex--;
+        updateContent();
+    }
+});
+
+nextButton.addEventListener("click", () => {
+    if (currentThemeIndex < themes.length - 1) {
+        currentThemeIndex++;
+        updateContent();
+    }
+});
+
+// Inicializando a página com o primeiro tema
+updateContent();
