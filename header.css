@@ -1,3 +1,4 @@
+/* header.css */
 header {
     background-color: #333;
     color: white;
@@ -26,7 +27,7 @@ header {
     top: 60px;
     right: 20px;
     background-color: #444;
-    display: none;
+    display: none; /* Lista oculta por padrão */
 }
 
 #theme-list li {
@@ -39,5 +40,5 @@ header {
 }
 
 .hidden {
-    display: none;
+    display: none; /* Classe para ocultar a lista */
 }
