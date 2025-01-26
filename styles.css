@@ -23,8 +23,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Assegura que o conteúdo ocupa toda a largura */
 }
 
+/* Logo */
 .logo {
     height: 50px;
 }
@@ -42,6 +44,7 @@ header {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-left: auto; /* Empurra o botão para a direita */
 }
 
 #theme-button:hover {
