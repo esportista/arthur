@@ -10,9 +10,10 @@
 body {
     font-family: 'EmiratesBold', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #2c3e50; /* Cor de texto principal (azul escuro suave) */
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9; /* Fundo claro e suave */
 }
 
 h1, h2, h3, p, a, .btn {
@@ -21,18 +22,19 @@ h1, h2, h3, p, a, .btn {
 
 /* Estilos do cabeçalho */
 header {
-    background: #333;
-    color: #fff;
+    background: #34495e; /* Azul escuro moderno */
+    color: #ecf0f1; /* Branco suave */
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 header .logo h1 {
     font-size: 1.5rem;
-    color: #ffff00; /* Logo em amarelo */
+    color: #f1c40f; /* Amarelo vibrante para o logo */
 }
 
 /* Estilos da navegação */
@@ -48,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffff00; /* Cor da fonte: amarelo */
+    color: #f1c40f; /* Amarelo vibrante para os links */
     text-decoration: none;
     font-weight: bold;
     position: relative;
@@ -64,13 +66,13 @@ nav ul li a::after {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #ffffff; /* Cor do sublinhado: branco */
+    background-color: #ecf0f1; /* Cor do sublinhado: branco suave */
     transition: width 0.3s ease;
 }
 
 /* Efeito ao passar o mouse */
 nav ul li a:hover {
-    color: #ffffff; /* Mudança de cor do texto para branco */
+    color: #ecf0f1; /* Mudança de cor do texto para branco suave */
 }
 
 nav ul li a:hover::after {
@@ -80,50 +82,67 @@ nav ul li a:hover::after {
 /* Estilos da seção Hero */
 .hero {
     background: url('https://esportista.github.io/arquivo/imagens/Arthur.png') no-repeat center center;
-    background-size: contain; /* Ajusta a imagem para caber sem cortes */
+    background-size: cover; /* Cobrir toda a área */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #333;
-    background-color: #f4f4f4; /* Cor de fundo caso a imagem não cubra toda a área */
+    color: #2c3e50; /* Azul escuro suave */
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Overlay branco semi-transparente */
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhorar a legibilidade */
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
     padding: 2rem;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #34495e; /* Azul escuro moderno */
 }
 
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #e74c3c; /* Vermelho vibrante para destaque */
 }
 
 .btn {
-    background: #ff6347;
+    background: #e74c3c; /* Vermelho vibrante */
     color: #fff;
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-    background: #e5533d; /* Efeito hover no botão */
+    background: #c0392b; /* Vermelho mais escuro no hover */
+    transform: translateY(-3px); /* Efeito de levitação */
 }
 
 /* Estilos da seção Sobre Mim */
 .sobre {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    background: #ecf0f1; /* Fundo branco suave */
 }
 
 .sobre-content {
@@ -137,6 +156,7 @@ nav ul li a:hover::after {
 .sobre-content img {
     width: 300px;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .sobre-texto {
@@ -144,10 +164,15 @@ nav ul li a:hover::after {
     text-align: left;
 }
 
+.sobre-texto p {
+    color: #34495e; /* Azul escuro moderno */
+}
+
 /* Estilos da seção Minha Carreira */
 .carreira {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    background: #fff; /* Fundo branco */
 }
 
 .carreira-grid {
@@ -158,18 +183,30 @@ nav ul li a:hover::after {
 }
 
 .carreira-card {
-    background: #f4f4f4;
-    padding: 1rem;
+    background: #ecf0f1; /* Fundo branco suave */
+    padding: 1.5rem;
     margin: 1rem;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carreira-card:hover {
+    transform: translateY(-5px); /* Efeito de levitação */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+.carreira-card h3 {
+    color: #e74c3c; /* Vermelho vibrante para títulos */
 }
 
 /* Estilos da seção Minhas Conquistas */
 .conquistas {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    background: #ecf0f1; /* Fundo branco suave */
 }
 
 .conquistas-grid {
@@ -180,18 +217,30 @@ nav ul li a:hover::after {
 }
 
 .conquista-card {
-    background: #f4f4f4;
-    padding: 1rem;
+    background: #fff; /* Fundo branco */
+    padding: 1.5rem;
     margin: 1rem;
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conquista-card:hover {
+    transform: translateY(-5px); /* Efeito de levitação */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+}
+
+.conquista-card h3 {
+    color: #e74c3c; /* Vermelho vibrante para títulos */
 }
 
 /* Estilos da seção Meus Patrocinadores */
 .patrocinadores {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
+    background: #fff; /* Fundo branco */
 }
 
 .patrocinadores-grid {
@@ -205,12 +254,17 @@ nav ul li a:hover::after {
 
 .patrocinadores-grid img {
     width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.patrocinadores-grid img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
 }
 
 /* Estilos do rodapé */
 footer {
-    background: #333;
-    color: #fff;
+    background: #34495e; /* Azul escuro moderno */
+    color: #ecf0f1; /* Branco suave */
     padding: 2rem 0;
     text-align: center;
 }
@@ -228,18 +282,18 @@ footer .footer-section {
 
 footer .footer-section h3 {
     margin-bottom: 1rem;
-    color: #ffff00; /* Títulos em amarelo */
+    color: #f1c40f; /* Amarelo vibrante para títulos */
 }
 
 footer .footer-section a {
-    color: #fff;
+    color: #ecf0f1; /* Branco suave */
     margin: 0 0.5rem;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 footer .footer-section a:hover {
-    color: #ffff00; /* Efeito hover nos ícones */
+    color: #f1c40f; /* Amarelo vibrante no hover */
 }
 
 footer .footer-bottom {
