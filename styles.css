@@ -89,7 +89,7 @@ main {
     top: 0;
     left: 0;
     width: 50%;
-    height: 50%;
+    height: 100%;
     background-size: cover; /* Garante que a imagem cubra todo o espaço */
     background-position: center; /* Centraliza a imagem */
     /* opacity: 1.0; /* Opacidade da imagem */
