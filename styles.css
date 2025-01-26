@@ -38,7 +38,7 @@ header {
     margin: 0;
     display: flex; /* Exibe os itens em linha */
     gap: 10px; /* Espaçamento entre os itens */
-    margin-left: 40px; /* Move o menu mais para a esquerda */
+    margin-left: 10px; /* Move o menu mais para a esquerda */
 }
 
 #theme-list li {
