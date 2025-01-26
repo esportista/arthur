@@ -78,9 +78,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: white; /* Fundo branco para o conteúdo */
     border-radius: 10px; /* Bordas arredondadas */
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
 }
 
@@ -88,13 +86,11 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%;
-    height: 100%;
+    width: 40%; /* Define a largura da imagem como 40% do container */
+    height: 100%; /* Define a altura da imagem como 100% do container */
     background-size: cover; /* Garante que a imagem cubra todo o espaço */
-    background-position: left; /* Centraliza a imagem */
-    /* opacity: 1.0; /* Opacidade da imagem */
+    background-position: left; /* Alinha a imagem à esquerda */
     z-index: -1; /* Coloca a imagem atrás do conteúdo */
-    transition: opacity 0.5s ease; /* Transição suave */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
@@ -103,7 +99,6 @@ main {
     padding: 20px;
     width: 50%;
     text-align: center;
-    transition: opacity 0.5s ease; /* Transição suave */
     border-radius: 10px; /* Bordas arredondadas */
 }
 
