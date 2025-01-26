@@ -19,7 +19,7 @@ const themes = [
     { 
         title: "Conquistas", 
         description: "Aqui vai o texto sobre minhas conquistas.", 
-        backgroundImage: "url('https://exemplo.com/conquistas.jpg')" 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur3.png')" 
     },
     { 
         title: "Marcas em que Acredito", 
