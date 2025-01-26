@@ -85,7 +85,7 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000096;
+    color: #333;
 }
 
 .hero-content h2 {
