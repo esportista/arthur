@@ -13,7 +13,7 @@ const themes = [
     },
     { 
         title: "Carreira", 
-        description: "Aqui vai o texto sobre minha carreira.", 
+        description: "Apaixonado por esse esporte desde a infância. Comecei minha trajetória nas quadras do Colégio Inovação, onde dei meus primeiros passos com a bola<br>Depois participei de projetos sociais (Croif e Assossiações) que ensinavam o fundamento do Futsal<br>Com o passar do tempo começei a jogar federado e o último time que atuei foi o ACAP<br>Hoje, encaro cada partida como uma oportunidade de crescer, não apenas como jogador, mas como pessoa, sempre motivado pelo amor ao futsal e pela dedicação ao que faço", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur.png')" 
     },
     { 
