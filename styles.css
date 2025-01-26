@@ -10,7 +10,7 @@
 body {
     font-family: 'EmiratesBold', sans-serif;
     line-height: 1.6;
-    color: #000096;
+    color: #333;
 }
 
 h1, h2, h3, p, a, .btn {
@@ -19,7 +19,7 @@ h1, h2, h3, p, a, .btn {
 
 /* Estilos gerais */
 header {
-    background: #333;
+    background: #000096;
     color: #fff;
     padding: 1rem 0;
     display: flex;
