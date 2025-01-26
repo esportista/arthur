@@ -29,7 +29,7 @@ const themes = [
     { 
         title: "Inspirações", 
         description: "Aqui vai o texto sobre minhas inspirações.", 
-        backgroundImage: "url('https://exemplo.com/inspiracoes.jpg')" 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/5Arthur.png')" 
     },
     { 
         title: "Vídeos", 
