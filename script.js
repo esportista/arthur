@@ -6,12 +6,36 @@ const themeTitle = document.getElementById("theme-title");
 const themeDescription = document.getElementById("theme-description");
 
 const themes = [
-    { title: "Sobre Mim", description: "Me chamo Arthur Moreira Freitas mais conhecido como Tuco, nasci em 2010<br>Jogo como Ala direita, e também como Fixo<br>Iniciei no Futsal aos 8 anos. Em 2013 me tornei atleta Federado", backgroundImage: "url('https://esportista.github.io/arquivo/imagens/ArthurComMedalha.png')" },
-    { title: "Carreira", description: "Aqui vai o texto sobre minha carreira.", backgroundImage: "url('https://exemplo.com/carreira.jpg')" },
-    { title: "Conquistas", description: "Aqui vai o texto sobre minhas conquistas.", backgroundImage: "url('https://exemplo.com/conquistas.jpg')" },
-    { title: "Marcas em que Acredito", description: "Aqui vai o texto sobre as marcas em que acredito.", backgroundImage: "url('https://exemplo.com/marcas.jpg')" },
-    { title: "Inspirações", description: "Aqui vai o texto sobre minhas inspirações.", backgroundImage: "url('https://exemplo.com/inspiracoes.jpg')" },
-    { title: "Vídeos", description: "Aqui vai o texto sobre meus vídeos.", backgroundImage: "url('https://exemplo.com/videos.jpg')" }
+    { 
+        title: "Sobre Mim", 
+        description: "Me chamo Arthur Moreira Freitas, mais conhecido como Tuco <br>Nasci em 2010. Jogo como Ala direita e também como Fixo <br>Iniciei no Futsal aos 8 anos.<br>Em 2023, me tornei atleta Federado", 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/ArthurComMedalha.png')" 
+    },
+    { 
+        title: "Carreira", 
+        description: "Aqui vai o texto sobre minha carreira.", 
+        backgroundImage: "url('https://exemplo.com/carreira.jpg')" 
+    },
+    { 
+        title: "Conquistas", 
+        description: "Aqui vai o texto sobre minhas conquistas.", 
+        backgroundImage: "url('https://exemplo.com/conquistas.jpg')" 
+    },
+    { 
+        title: "Marcas em que Acredito", 
+        description: "Aqui vai o texto sobre as marcas em que acredito.", 
+        backgroundImage: "url('https://exemplo.com/marcas.jpg')" 
+    },
+    { 
+        title: "Inspirações", 
+        description: "Aqui vai o texto sobre minhas inspirações.", 
+        backgroundImage: "url('https://exemplo.com/inspiracoes.jpg')" 
+    },
+    { 
+        title: "Vídeos", 
+        description: "Aqui vai o texto sobre meus vídeos.", 
+        backgroundImage: "url('https://exemplo.com/videos.jpg')" 
+    }
 ];
 
 let currentThemeIndex = 0; // Índice do tema atual
@@ -25,8 +49,8 @@ function updateContent() {
     themeDescription.style.opacity = 0;
 
     setTimeout(() => {
-        themeTitle.textContent = theme.title;
-        themeDescription.textContent = theme.description;
+        themeTitle.textContent = theme.title; // Usa textContent para o título
+        themeDescription.innerHTML = theme.description; // Usa innerHTML para a descrição (permite <br>)
         themeTitle.style.opacity = 1;
         themeDescription.style.opacity = 1;
 
