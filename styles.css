@@ -69,30 +69,38 @@ nav ul li a {
     font-weight: bold;
 }
 
-.atletas, .tecnicos, .patrocinadores {
+.sobre, .carreira, .conquistas, .patrocinadores {
     padding: 2rem;
     text-align: center;
 }
 
-.atletas-grid, .tecnicos-grid {
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sobre-content img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.carreira-grid, .conquistas-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 2rem;
 }
 
-.atleta-card, .tecnico-card {
+.carreira-card, .conquista-card {
     background: #f4f4f4;
     padding: 1rem;
     margin: 1rem;
     border-radius: 10px;
     width: 300px;
     text-align: center;
-}
-
-.atleta-card img, .tecnico-card img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 .patrocinadores-grid {
