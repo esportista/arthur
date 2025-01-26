@@ -3,6 +3,8 @@ const themeButton = document.getElementById("theme-button");
 const themeList = document.getElementById("theme-list");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
+const themeTitle = document.getElementById("theme-title");
+const themeDescription = document.getElementById("theme-description");
 
 const themes = [
     { title: "Sobre Mim", description: "Aqui vai o texto sobre mim." },
@@ -15,11 +17,20 @@ const themes = [
 
 let currentThemeIndex = 0; // Índice do tema atual
 
-// Função para atualizar o título e a descrição
+// Função para atualizar o título e a descrição com transição suave
 function updateContent() {
     const theme = themes[currentThemeIndex];
-    document.getElementById("theme-title").textContent = theme.title;
-    document.getElementById("theme-description").textContent = theme.description;
+
+    // Adiciona uma transição suave
+    themeTitle.style.opacity = 0;
+    themeDescription.style.opacity = 0;
+
+    setTimeout(() => {
+        themeTitle.textContent = theme.title;
+        themeDescription.textContent = theme.description;
+        themeTitle.style.opacity = 1;
+        themeDescription.style.opacity = 1;
+    }, 300); // 300ms de duração da transição
 }
 
 // Exibir ou ocultar a lista de temas ao clicar no botão
