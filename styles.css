@@ -11,16 +11,18 @@ body {
     font-family: 'EmiratesBold', sans-serif;
     line-height: 1.6;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, p, a, .btn {
     font-family: 'EmiratesBold', sans-serif;
 }
 
-/* Estilos gerais */
+/* Estilos do cabeçalho */
 header {
-    background: #000096;
-    color: #ffff00;
+    background: #333;
+    color: #fff;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -30,11 +32,15 @@ header {
 
 header .logo h1 {
     font-size: 1.5rem;
+    color: #ffff00; /* Logo em amarelo */
 }
 
+/* Estilos da navegação */
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -42,11 +48,36 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffff00;
+    color: #ffff00; /* Cor da fonte: amarelo */
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    padding-bottom: 5px; /* Espaço para o sublinhado */
+    transition: color 0.3s ease;
 }
 
+/* Efeito de sublinhado animado */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Cor do sublinhado: branco */
+    transition: width 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    color: #ffffff; /* Mudança de cor do texto para branco */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Sublinhado cresce até 100% */
+}
+
+/* Estilos da seção Hero */
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -74,9 +105,15 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.sobre, .carreira, .conquistas, .patrocinadores {
+.btn:hover {
+    background: #e5533d; /* Efeito hover no botão */
+}
+
+/* Estilos da seção Sobre Mim */
+.sobre {
     padding: 2rem;
     text-align: center;
 }
@@ -94,19 +131,58 @@ nav ul li a {
     border-radius: 10px;
 }
 
-.carreira-grid, .conquistas-grid {
+.sobre-texto {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Estilos da seção Minha Carreira */
+.carreira {
+    padding: 2rem;
+    text-align: center;
+}
+
+.carreira-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 2rem;
 }
 
-.carreira-card, .conquista-card {
+.carreira-card {
     background: #f4f4f4;
     padding: 1rem;
     margin: 1rem;
     border-radius: 10px;
     width: 300px;
+    text-align: center;
+}
+
+/* Estilos da seção Minhas Conquistas */
+.conquistas {
+    padding: 2rem;
+    text-align: center;
+}
+
+.conquistas-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.conquista-card {
+    background: #f4f4f4;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Estilos da seção Meus Patrocinadores */
+.patrocinadores {
+    padding: 2rem;
     text-align: center;
 }
 
@@ -123,6 +199,7 @@ nav ul li a {
     width: 150px;
 }
 
+/* Estilos do rodapé */
 footer {
     background: #333;
     color: #fff;
@@ -143,14 +220,21 @@ footer .footer-section {
 
 footer .footer-section h3 {
     margin-bottom: 1rem;
+    color: #ffff00; /* Títulos em amarelo */
 }
 
 footer .footer-section a {
     color: #fff;
     margin: 0 0.5rem;
     font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-section a:hover {
+    color: #ffff00; /* Efeito hover nos ícones */
 }
 
 footer .footer-bottom {
     margin-top: 1rem;
+    font-size: 0.9rem;
 }
