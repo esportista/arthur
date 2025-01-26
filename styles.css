@@ -292,3 +292,88 @@ footer .footer-bottom {
     margin-top: 1rem;
     font-size: 0.9rem;
 }
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    /* Ajustes para telas menores (tablets e smartphones) */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem; /* Reduzir o tamanho do título */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Reduzir o tamanho do texto */
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-content img {
+        width: 100%; /* Ajustar a largura da imagem */
+        max-width: 300px;
+    }
+
+    .carreira-grid, .conquistas-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carreira-card, .conquista-card {
+        width: 90%; /* Ajustar a largura dos cards */
+    }
+
+    .patrocinadores-grid img {
+        width: 100px; /* Reduzir o tamanho dos logos */
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para smartphones pequenos */
+    .hero-content h2 {
+        font-size: 1.5rem; /* Reduzir ainda mais o tamanho do título */
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Reduzir ainda mais o tamanho do texto */
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Reduzir o tamanho do botão */
+    }
+
+    .sobre-content img {
+        max-width: 200px; /* Reduzir o tamanho da imagem */
+    }
+
+    .carreira-card, .conquista-card {
+        width: 100%; /* Ajustar a largura dos cards */
+    }
+
+    .patrocinadores-grid img {
+        width: 80px; /* Reduzir ainda mais o tamanho dos logos */
+    }
+}
