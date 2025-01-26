@@ -9,7 +9,45 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <!-- Código HTML aqui -->
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo" class="logo">
+            <button id="theme-button">Listar Temas</button>
+            <ul id="theme-list" class="hidden">
+                <li data-theme="sobre-mim">Sobre Mim</li>
+                <li data-theme="carreira">Carreira</li>
+                <li data-theme="conquistas">Conquistas</li>
+                <li data-theme="marcas">Marcas em que Acredito</li>
+                <li data-theme="inspiracoes">Inspirações</li>
+                <li data-theme="videos">Vídeos</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="background-image"></div>
+            <div class="text-content">
+                <h1 id="theme-title">Sobre Mim</h1>
+                <p id="theme-description">Aqui vai o texto sobre mim.</p>
+            </div>
+            <button id="prev-button">&lt;</button>
+            <button id="next-button">&gt;</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Email: exemplo@email.com</p>
+            <p>
+                <a href="https://facebook.com">Facebook</a> |
+                <a href="https://twitter.com">Twitter</a> |
+                <a href="https://instagram.com">Instagram</a>
+            </p>
+            <p>&copy; 2023 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
