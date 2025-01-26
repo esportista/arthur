@@ -90,14 +90,20 @@ nav ul li a:hover::after {
     background-color: #f4f4f4; /* Cor de fundo caso a imagem não cubra toda a área */
 }
 
-.hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.hero-content {
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhorar a legibilidade */
+    padding: 2rem;
+    border-radius: 10px;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .btn {
