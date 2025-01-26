@@ -96,6 +96,7 @@ main {
     padding: 20px; /* Espaçamento interno */
     text-align: left; /* Alinhamento do texto à esquerda */
     border-radius: 0 10px 10px 0; /* Bordas arredondadas apenas no lado direito */
+    background-color: #f0f0f0; /* Cor de fundo para espaços vazios (opcional) */
 }
 
 .text-column h1 {
