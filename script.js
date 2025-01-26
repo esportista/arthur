@@ -8,27 +8,27 @@ const themeDescription = document.getElementById("theme-description");
 const themes = [
     { 
         title: "Sobre Mim", 
-        description: "Me chamo Arthur Moreira Freitas, mais conhecido como Tuco.<br>Nasci em 2010.<br>Jogo como Ala direita e também como Fixo.<br>Iniciei no Futsal aos 8 anos.<br>Em 2023, me tornei atleta Federado.", 
+        description: "Me chamo Arthur Moreira Freitas<br>Nasci em 2010<br>Jogo como Ala direita e Fixo<br>Iniciei no Futsal aos 8 anos<br>Em 2023, me tornei atleta Federado<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/ArthurComMedalha.png')" 
     },
     { 
         title: "Carreira", 
-        description: "Apaixonado por esse esporte desde a infância. Comecei minha trajetória nas quadras do Colégio Inovação, onde dei meus primeiros passos com a bola.<br>Depois participei de projetos sociais (Croif e Associações) que ensinavam o fundamento do Futsal.<br>Com o passar do tempo, comecei a jogar federado, e o último time que atuei foi o ACAP.<br>Hoje, encaro cada partida como uma oportunidade de crescer, não apenas como jogador, mas como pessoa, sempre motivado pelo amor ao futsal e pela dedicação ao que faço.", 
+        description: "Futsal<br>Com o passar do tempo, comecei a jogar federado<br>Hoje, encaro cada partida como uma oportunidade de crescer,<br>não apenas como jogador, mas como pessoa,<br>sempre motivado pelo amor ao futsal e pela dedicação ao que faço", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur.png')" 
     },
     { 
         title: "Conquistas", 
-        description: "Aqui vai o texto sobre minhas conquistas.", 
+        description: "Vice da Copa Paulista Gold - 2023<br>Campeão da Copa Paulista Gold - 2024<br>Campeão do Metropolitano Série Bronze - 2024<br>Vice Campeão Copa Primeiro de Maio - 2024<br>Vice Campeão Estadual Série Prata - 2024<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur3.png')" 
     },
     { 
         title: "Marcas em que Acredito", 
-        description: "Aqui vai o texto sobre as marcas em que acredito.", 
+        description: "Umbro<br>Joma<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur4.png')" 
     },
     { 
         title: "Inspirações", 
-        description: "Aqui vai o texto sobre minhas inspirações.", 
+        description: "Primeiramente DEUS<br>Minha Família<br><br>Técnico na Base: Valdir (Treinador Palameiras)<br>Atleta: Arthur Fortunato (Ala Seleção)<br>Técnico no Profissional: Marquinhos Xavier<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/5Arthur.png')" 
     },
     { 
