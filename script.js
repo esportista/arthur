@@ -28,9 +28,8 @@ themeButton.addEventListener("click", () => {
 });
 
 // Selecionando um tema ao clicar na lista
-const themeItems = document.querySelectorAll("#theme-list li");
-themeItems.forEach(item => {
-    item.addEventListener("click", (event) => {
+themeList.addEventListener("click", (event) => {
+    if (event.target && event.target.tagName === "LI") {
         const theme = event.target.getAttribute("data-theme");
 
         // Atualizando o conteúdo com base no tema selecionado
@@ -56,7 +55,7 @@ themeItems.forEach(item => {
         }
         updateContent();  // Atualizando o conteúdo da página
         themeList.classList.add("hidden");  // Ocultando a lista
-    });
+    }
 });
 
 // Navegação com as setas
