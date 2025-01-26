@@ -1,5 +1,4 @@
 // Obtendo os elementos
-const themeButton = document.getElementById("theme-button");
 const themeList = document.getElementById("theme-list");
 const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
@@ -33,11 +32,6 @@ function updateContent() {
     }, 300); // 300ms de duração da transição
 }
 
-// Exibir ou ocultar a lista de temas ao clicar no botão
-themeButton.addEventListener("click", () => {
-    themeList.classList.toggle("hidden");
-});
-
 // Selecionando um tema ao clicar na lista
 themeList.addEventListener("click", (event) => {
     if (event.target && event.target.tagName === "LI") {
@@ -65,7 +59,6 @@ themeList.addEventListener("click", (event) => {
                 break;
         }
         updateContent();  // Atualizando o conteúdo da página
-        themeList.classList.add("hidden");  // Ocultando a lista
     }
 });
 
