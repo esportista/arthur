@@ -6,7 +6,9 @@ const themeTitle = document.getElementById("theme-title");
 const themeDescription = document.getElementById("theme-description");
 
 const themes = [
-    { title: "Sobre Mim", description: "Aqui vai o texto sobre mim.", backgroundImage: "url('https://esportista.github.io/arquivo/imagens/ArthurComMedalha.png')" },
+    { title: "Sobre Mim", description: "Me chamo Arthur Moreira Freitas mais conhecido como Tuco, nasci em 2010
+Jogo como Ala direita, e também como Fixo
+Iniciei no Futsal aos 8 anos. Em 2013 me tornei atleta Federado", backgroundImage: "url('https://esportista.github.io/arquivo/imagens/ArthurComMedalha.png')" },
     { title: "Carreira", description: "Aqui vai o texto sobre minha carreira.", backgroundImage: "url('https://exemplo.com/carreira.jpg')" },
     { title: "Conquistas", description: "Aqui vai o texto sobre minhas conquistas.", backgroundImage: "url('https://exemplo.com/conquistas.jpg')" },
     { title: "Marcas em que Acredito", description: "Aqui vai o texto sobre as marcas em que acredito.", backgroundImage: "url('https://exemplo.com/marcas.jpg')" },
