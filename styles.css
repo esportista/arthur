@@ -80,7 +80,7 @@ nav ul li a:hover::after {
 /* Estilos da seção Hero */
 .hero {
     background: url('https://esportista.github.io/arquivo/imagens/Arthur.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 80vh; /* Reduzindo o tamanho da imagem em 20% */
     display: flex;
     justify-content: center;
     align-items: center;
