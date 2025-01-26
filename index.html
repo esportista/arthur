@@ -1,60 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esportista - Página Oficial</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Esportistas - Plataforma de Apresentação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Esportistas</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#atletas">Atletas</a></li>
+                <li><a href="#tecnicos">Técnicos</a></li>
+                <li><a href="#patrocinadores">Patrocinadores</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header id="header">
-    <div class="logo">
-        <h1>Nome do Esportista</h1>
-    </div>
-</header>
+    <!-- Seção Hero (Destaque) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo ao Mundo dos Esportistas</h2>
+            <p>Conheça os maiores talentos do esporte.</p>
+            <a href="#atletas" class="btn">Explorar</a>
+        </div>
+    </section>
 
-<section id="sobre">
-    <div class="container">
-        <h2>Sobre o Esportista</h2>
-        <p>Biografia do esportista...</p>
-    </div>
-</section>
-
-<section id="conquistas">
-    <div class="container">
-        <h2>Conquistas</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Conquista 1</h3>
-                <p>Descrição da conquista...</p>
+    <!-- Seção de Atletas -->
+    <section id="atletas" class="atletas">
+        <h2>Nossos Atletas</h2>
+        <div class="atletas-grid">
+            <div class="atleta-card">
+                <img src="atleta1.jpg" alt="Atleta 1">
+                <h3>Nome do Atleta 1</h3>
+                <p>Esporte: Futebol</p>
+                <p>Idade: 25 anos</p>
             </div>
-            <div class="card">
-                <h3>Conquista 2</h3>
-                <p>Descrição da conquista...</p>
+            <div class="atleta-card">
+                <img src="atleta2.jpg" alt="Atleta 2">
+                <h3>Nome do Atleta 2</h3>
+                <p>Esporte: Basquete</p>
+                <p>Idade: 28 anos</p>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Seção de Técnicos -->
+    <section id="tecnicos" class="tecnicos">
+        <h2>Nossos Técnicos</h2>
+        <div class="tecnicos-grid">
+            <div class="tecnico-card">
+                <img src="tecnico1.jpg" alt="Técnico 1">
+                <h3>Nome do Técnico 1</h3>
+                <p>Esporte: Vôlei</p>
+                <p>Experiência: 10 anos</p>
+            </div>
+            <div class="tecnico-card">
+                <img src="tecnico2.jpg" alt="Técnico 2">
+                <h3>Nome do Técnico 2</h3>
+                <p>Esporte: Futebol</p>
+                <p>Experiência: 15 anos</p>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Seção de Patrocinadores -->
+    <section id="patrocinadores" class="patrocinadores">
+        <h2>Nossos Patrocinadores</h2>
+        <div class="patrocinadores-grid">
+            <img src="patrocinador1.png" alt="Patrocinador 1">
+            <img src="patrocinador2.png" alt="Patrocinador 2">
+            <img src="patrocinador3.png" alt="Patrocinador 3">
+            <!-- Adicione mais logos de patrocinadores conforme necessário -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@esportistas.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-    </div>
-</section>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Esportistas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<section id="contato">
-    <div class="container">
-        <h2>Contato</h2>
-        <form id="form-contato">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2025 Nome do Esportista | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
-    </div>
-</footer>
-
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
