@@ -1,4 +1,4 @@
-// Exemplo de interatividade: Scroll suave para as seções
+// Scroll suave para as seções
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
