@@ -92,7 +92,7 @@ main {
     height: 100%;
     background-size: cover; /* Garante que a imagem cubra todo o espaço */
     background-position: center; /* Centraliza a imagem */
-    opacity: 1.0; /* Opacidade da imagem */
+    /* opacity: 1.0; /* Opacidade da imagem */
     z-index: -1; /* Coloca a imagem atrás do conteúdo */
     transition: opacity 0.5s ease; /* Transição suave */
     border-radius: 10px; /* Bordas arredondadas */
