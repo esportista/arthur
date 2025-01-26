@@ -96,10 +96,12 @@ main {
 
 .text-content {
     background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
-    padding: 20px;
-    width: 50%;
-    text-align: center;
+    padding: 20px; /* Espaçamento interno */
+    width: 50%; /* Largura do elemento */
+    text-align: center; /* Alinhamento do texto ao centro */
     border-radius: 10px; /* Bordas arredondadas */
+    margin-left: auto; /* Move o elemento para a direita */
+    margin-right: 0; /* Remove a margem à direita */
 }
 
 .text-content h1 {
