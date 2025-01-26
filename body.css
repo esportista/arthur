@@ -1,0 +1,89 @@
+/* body.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.text-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+#prev-button, #next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
+
+/* Estilos específicos para cada tema */
+.sobre-mim .background-image {
+    background-image: url('sobre-mim.jpg');
+}
+
+.carreira .background-image {
+    background-image: url('carreira.jpg');
+}
+
+.conquistas .background-image {
+    background-image: url('conquistas.jpg');
+}
+
+.marcas .background-image {
+    background-image: url('marcas.jpg');
+}
+
+.inspiracoes .background-image {
+    background-image: url('inspiracoes.jpg');
+}
+
+.videos .background-image {
+    background-image: url('videos.jpg');
+}
