@@ -68,7 +68,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 80px; /* Margem superior para evitar sobreposição com o header */
-    margin-bottom: 80px; /* Margem inferior para evitar sobreposição com o footer */
+    margin-bottom: 90px; /* Margem inferior para evitar sobreposição com o footer */
 }
 
 .content {
