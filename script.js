@@ -34,7 +34,7 @@ const themes = [
     { 
         title: "Vídeos", 
         description: "Aqui vai o texto sobre meus vídeos.", 
-        backgroundImage: "url('https://exemplo.com/videos.jpg')" 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur6.png')" 
     }
 ];
 
