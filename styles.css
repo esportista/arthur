@@ -78,9 +78,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: white;  Fundo branco para o conteúdo */
+    /* background-color: white; /* Fundo branco para o conteúdo */
     border-radius: 10px; /* Bordas arredondadas */
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
     padding: 20px;
 }
 
