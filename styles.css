@@ -37,14 +37,16 @@ header {
     padding: 0;
     margin: 0;
     display: flex; /* Exibe os itens em linha */
-    gap: 0.2px; /* Espaçamento entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-left: 20px; /* Move o menu mais para a esquerda */
 }
 
 #theme-list li {
-    padding: 10px 20px;
+    padding: 10px 15px; /* Reduz o padding para economizar espaço */
     cursor: pointer;
     color: white;
     transition: background-color 0.3s ease; /* Transição suave */
+    font-size: 0.8em; /* Reduz o tamanho da fonte em 20% (1em = 100%, 0.8em = 80%) */
 }
 
 #theme-list li:hover {
@@ -145,10 +147,11 @@ footer a:hover {
     }
 
     #theme-list {
-        gap: 10px; /* Reduz o espaçamento entre os itens em telas menores */
+        gap: 5px; /* Reduz o espaçamento entre os itens em telas menores */
     }
 
     #theme-list li {
-        padding: 10px; /* Reduz o padding em telas menores */
+        padding: 8px 12px; /* Reduz o padding em telas menores */
+        font-size: 0.7em; /* Reduz ainda mais o tamanho da fonte em dispositivos móveis */
     }
 }
