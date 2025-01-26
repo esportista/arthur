@@ -44,7 +44,7 @@ header {
     font-size: 16px;
     border-radius: 5px;
     margin-left: auto; /* Empurra o botão para a direita */
-    margin-right: 30px; /* Ajusta a distância da borda direita */
+    margin-right: 40px; /* Ajusta a distância da borda direita */
 }
 
 #theme-button:hover {
