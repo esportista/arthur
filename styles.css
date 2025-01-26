@@ -131,11 +131,11 @@ main {
 }
 
 #prev-button {
-    left: -18px; /* Posicionamento à esquerda */
+    left: -10px; /* Posicionamento à esquerda */
 }
 
 #next-button {
-    right: -18px; /* Posicionamento à direita */
+    right: -10px; /* Posicionamento à direita */
 }
 
 /* Footer */
