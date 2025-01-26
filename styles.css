@@ -72,49 +72,42 @@ main {
 }
 
 .content {
-    position: relative;
+    display: flex;
     width: 80%;
     height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px;
+    overflow: hidden; /* Garante que as bordas arredondadas sejam aplicadas */
 }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%; /* Define a largura da imagem como 40% do container */
-    height: 100%; /* Define a altura da imagem como 100% do container */
+/* Coluna da imagem */
+.image-column {
+    flex: 1; /* Ocupa metade do espaço */
     background-size: cover; /* Garante que a imagem cubra todo o espaço */
-    background-position: left; /* Alinha a imagem à esquerda */
-    z-index: -1; /* Coloca a imagem atrás do conteúdo */
-    border-radius: 10px; /* Bordas arredondadas */
+    background-position: center; /* Centraliza a imagem */
+    border-radius: 10px 0 0 10px; /* Bordas arredondadas apenas no lado esquerdo */
 }
 
-.text-content {
+/* Coluna do texto */
+.text-column {
+    flex: 1; /* Ocupa metade do espaço */
     background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
     padding: 20px; /* Espaçamento interno */
-    width: 50%; /* Largura do elemento */
-    text-align: left; /* Alinhamento do texto a esquerda */
-    border-radius: 10px; /* Bordas arredondadas */
-    margin-left: auto; /* Move o elemento para a direita */
-    margin-right: 0; /* Remove a margem à direita */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    border-radius: 0 10px 10px 0; /* Bordas arredondadas apenas no lado direito */
 }
 
-.text-content h1 {
+.text-column h1 {
     font-size: 2.5em; /* Tamanho maior para o título */
     color: #333; /* Cinza escuro para o título */
     margin-bottom: 10px;
 }
 
-.text-content p {
+.text-column p {
     font-size: 1.1em; /* Tamanho confortável para leitura */
     color: #555; /* Cinza médio para o texto */
 }
 
+/* Botões de navegação */
 #prev-button, #next-button {
     position: absolute;
     top: 50%;
@@ -169,24 +162,27 @@ footer a:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .text-content {
-        width: 90%; /* Aumenta a largura do conteúdo em dispositivos móveis */
+    .content {
+        flex-direction: column; /* Empilha as colunas em telas menores */
+        height: auto; /* Altura automática para se ajustar ao conteúdo */
     }
 
-    #theme-list {
-        gap: 10px; /* Reduz o espaçamento entre os itens em telas menores */
+    .image-column {
+        flex: none; /* Remove a flexibilidade */
+        height: 200px; /* Altura fixa para a imagem em dispositivos móveis */
+        border-radius: 10px 10px 0 0; /* Bordas arredondadas apenas no topo */
     }
 
-    #theme-list li {
-        padding: 8px 12px; /* Reduz o padding em telas menores */
-        font-size: 0.8em; /* Reduz ainda mais o tamanho da fonte em dispositivos móveis */
+    .text-column {
+        flex: none; /* Remove a flexibilidade */
+        border-radius: 0 0 10px 10px; /* Bordas arredondadas apenas na base */
     }
 
-    .text-content h1 {
-        font-size: 2em; /* Tamanho menor para o título em dispositivos móveis */
+    .text-column {
+        width: 100%; /* Ocupa toda a largura em dispositivos móveis */
     }
 
-    .text-content p {
-        font-size: 1em; /* Tamanho menor para o texto em dispositivos móveis */
+    #prev-button, #next-button {
+        display: none; /* Oculta os botões de navegação em dispositivos móveis */
     }
 }
