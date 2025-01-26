@@ -14,7 +14,7 @@ const themes = [
     { 
         title: "Carreira", 
         description: "Aqui vai o texto sobre minha carreira.", 
-        backgroundImage: "url('https://exemplo.com/carreira.jpg')" 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur.png')" 
     },
     { 
         title: "Conquistas", 
