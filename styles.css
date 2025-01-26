@@ -86,9 +86,9 @@ nav ul li a:hover::after {
     background-color: #f4f4f4; /* Cor de fundo para preencher espaços vazios */
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start; /* Alinhar o conteúdo à esquerda */
+    align-items: flex-start; /* Alinhar o conteúdo no topo */
+    padding: 2rem; /* Espaçamento interno */
     color: #2c3e50; /* Azul escuro suave */
     position: relative;
     overflow: hidden; /* Evitar que a imagem ultrapasse os limites da seção */
@@ -98,27 +98,30 @@ nav ul li a:hover::after {
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente apenas para o conteúdo */
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    align-items: center; /* Alinhar os itens verticalmente */
+    gap: 1rem; /* Espaço entre os elementos */
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin: 0; /* Remover margem inferior */
     color: #34495e; /* Azul escuro moderno */
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Reduzir o tamanho do título */
+    margin: 0; /* Remover margem inferior */
     color: #e74c3c; /* Vermelho vibrante para destaque */
 }
 
 .btn {
     background: #e74c3c; /* Vermelho vibrante */
     color: #fff;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -314,8 +317,13 @@ footer .footer-bottom {
         margin: 0.5rem 0;
     }
 
+    .hero-content {
+        flex-direction: column; /* Alinhar conteúdo em coluna em telas menores */
+        align-items: flex-start; /* Alinhar à esquerda */
+    }
+
     .hero-content h2 {
-        font-size: 2rem; /* Reduzir o tamanho do título */
+        font-size: 1.5rem; /* Reduzir o tamanho do título */
     }
 
     .hero-content p {
@@ -354,7 +362,7 @@ footer .footer-bottom {
 @media (max-width: 480px) {
     /* Ajustes para smartphones pequenos */
     .hero-content h2 {
-        font-size: 1.5rem; /* Reduzir ainda mais o tamanho do título */
+        font-size: 1.2rem; /* Reduzir ainda mais o tamanho do título */
     }
 
     .hero-content p {
