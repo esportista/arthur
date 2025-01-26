@@ -13,11 +13,16 @@ const themes = [
 ];
 let currentIndex = 0;
 
-// Alterna a visibilidade da lista de temas
+// Alterna a visibilidade da lista de temas ao clicar no botão
 themeButton.addEventListener('click', () => {
-    themeList.classList.toggle('hidden');
-    const expanded = themeButton.getAttribute('aria-expanded') === 'true';
-    themeButton.setAttribute('aria-expanded', !expanded);
+    const isHidden = themeList.classList.contains('hidden');
+    if (isHidden) {
+        themeList.classList.remove('hidden');
+        themeButton.setAttribute('aria-expanded', 'true');
+    } else {
+        themeList.classList.add('hidden');
+        themeButton.setAttribute('aria-expanded', 'false');
+    }
 });
 
 // Atualiza o tema ao clicar em um item da lista
@@ -25,6 +30,8 @@ themeList.addEventListener('click', (e) => {
     if (e.target.tagName === 'LI') {
         const index = Array.from(themeList.children).indexOf(e.target);
         updateContent(index);
+        themeList.classList.add('hidden'); // Esconde a lista após selecionar um tema
+        themeButton.setAttribute('aria-expanded', 'false');
     }
 });
 
@@ -39,7 +46,7 @@ document.getElementById('next-button').addEventListener('click', () => {
     updateContent(currentIndex);
 });
 
-// Atualiza o título e a descrição
+// Atualiza o título e a descrição com base no índice atual
 function updateContent(index) {
     currentIndex = index;
     themeTitle.textContent = themes[index].title;
