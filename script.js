@@ -24,7 +24,7 @@ const themes = [
     { 
         title: "Marcas em que Acredito", 
         description: "Aqui vai o texto sobre as marcas em que acredito.", 
-        backgroundImage: "url('https://exemplo.com/marcas.jpg')" 
+        backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur4.png')" 
     },
     { 
         title: "Inspirações", 
