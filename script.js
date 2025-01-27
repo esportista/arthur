@@ -22,7 +22,7 @@ const themes = [
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur3.png')" 
     },
     { 
-        title: "Marcas em que Acredito", 
+        title: "Eu Acredito Nelas", 
         description: "Umbro<br>Joma<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur4.png')" 
     },
