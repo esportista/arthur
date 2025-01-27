@@ -28,7 +28,7 @@ const themes = [
     },
     { 
         title: "Inspirações", 
-        description: "Primeiramente DEUS<br>Minha Família<br><br>Técnico na Base: Valdir (Treinador Palameiras)<br>Atleta: Arthur Fortunato (Ala Seleção)<br>Técnico no Profissional: Marquinhos Xavier<br>", 
+        description: "Primeiramente DEUS<br>Minha Família<br><br>Técnico na Base: Valdir (Treinador Palmeiras)<br>Atleta: Arthur Fortunato (Ala Seleção)<br>Técnico no Profissional: Marquinhos Xavier<br>", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/5Arthur.png')" 
     },
     { 
