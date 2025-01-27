@@ -106,14 +106,14 @@ main {
 }
 
 .text-column h1 {
-    font-size: 2.5em; /* Tamanho maior para o título */
+    font-size: 4.0em; /* Tamanho maior para o título */
     color: #333; /* Cinza escuro para o título */
     margin-bottom: 20px; /* Aumentei o espaçamento abaixo do título */
     font-weight: 700; /* Deixa o título mais destacado */
 }
 
 .text-column p {
-    font-size: 1.1em; /* Tamanho confortável para leitura */
+    font-size: 1.7em; /* Tamanho confortável para leitura */
     color: #555; /* Cinza médio para o texto */
     line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhorar a legibilidade */
     margin: 0 0 10px 0; /* Adiciona espaçamento entre os parágrafos */
