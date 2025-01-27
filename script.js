@@ -71,39 +71,4 @@ themeList.addEventListener("click", (event) => {
                 currentThemeIndex = 0;
                 break;
             case "carreira":
-                currentThemeIndex = 1;
-                break;
-            case "conquistas":
-                currentThemeIndex = 2;
-                break;
-            case "marcas":
-                currentThemeIndex = 3;
-                break;
-            case "inspiracoes":
-                currentThemeIndex = 4;
-                break;
-            case "videos":
-                currentThemeIndex = 5;
-                break;
-        }
-        updateContent();  // Atualizando o conteúdo da página
-    }
-});
-
-// Navegação com as setas
-prevButton.addEventListener("click", () => {
-    if (currentThemeIndex > 0) {
-        currentThemeIndex--;
-        updateContent();
-    }
-});
-
-nextButton.addEventListener("click", () => {
-    if (currentThemeIndex < themes.length - 1) {
-        currentThemeIndex++;
-        updateContent();
-    }
-});
-
-// Inicializando a página com o primeiro tema
-updateContent();
+                currentThemeIndex = 1
