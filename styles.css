@@ -98,7 +98,7 @@ main {
     flex-direction: column;
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
-    text-align: center; /* Alinhamento do texto ao centro */
+    text-align: left; /* Alinhamento do texto ao centro */
     border-radius: 0 10px 10px 0; /* Bordas arredondadas apenas no lado direito */
     background-color: #f0f0f0; /* Cor de fundo para espaços vazios (opcional) */
     max-width: 50%; /* Limita a largura para evitar que o texto fique muito largo */
