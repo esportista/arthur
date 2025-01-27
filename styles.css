@@ -204,3 +204,21 @@ footer a:hover {
         display: none; /* Oculta os botões de navegação em dispositivos móveis */
     }
 }
+
+/* Estilos para o botão de alternar ordem do menu */
+#toggle-order-button {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 1001;
+    padding: 10px;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggle-order-button:hover {
+    background-color: #e65c00;
+}
