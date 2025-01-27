@@ -44,7 +44,7 @@ header {
     margin: 0;
     display: flex; /* Exibe os itens em linha */
     gap: 15px; /* Espaçamento entre os itens */
-    margin-right: 40px; /* Move o menu mais para a esquerda */
+    margin-right: 80px; /* Move o menu mais para a esquerda */
 }
 
 #theme-list li {
