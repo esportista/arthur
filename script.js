@@ -13,7 +13,7 @@ const themes = [
     },
     { 
         title: "Carreira", 
-        description: "Apaixonado por esse esporte desde a infância<br>Comecei minha trajetória nas quadras do Colégio Inovação<br>Participei de projetos sociais que ensinavam o fundamento do Futsal<br>Com o passar do tempo, comecei a jogar federado<br>Hoje, encaro cada partida como uma oportunidade de crescer,<br>não apenas como jogador, mas como pessoa,<br>sempre motivado pelo amor ao futsal e pela dedicação ao que faço.", 
+        description: "Apaixonado por esse esporte desde a infância<br>Trajetória que começa nas quadras do Colégio Inovação<br>Projetos sociais me ensinavam o fundamento do Futsal<br>Com o passar do tempo, comecei a jogar federado<br>Encaro cada partida como uma oportunidade de crescer,<br>não apenas como jogador, mas como pessoa,<br>motivado pelo amor ao futsal e pela dedicação ao que faço.", 
         backgroundImage: "url('https://esportista.github.io/arquivo/imagens/Arthur.png')" 
     },
     { 
