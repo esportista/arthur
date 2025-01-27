@@ -71,4 +71,65 @@ themeList.addEventListener("click", (event) => {
                 currentThemeIndex = 0;
                 break;
             case "carreira":
-                currentThemeIndex = 1
+                currentThemeIndex = 1;
+                break;
+            case "conquistas":
+                currentThemeIndex = 2;
+                break;
+            case "marcas":
+                currentThemeIndex = 3;
+                break;
+            case "inspiracoes":
+                currentThemeIndex = 4;
+                break;
+            case "videos":
+                currentThemeIndex = 5;
+                break;
+        }
+        updateContent();  // Atualizando o conteúdo da página
+    }
+});
+
+// Navegação com as setas
+prevButton.addEventListener("click", () => {
+    if (currentThemeIndex > 0) {
+        currentThemeIndex--;
+        updateContent();
+    }
+});
+
+nextButton.addEventListener("click", () => {
+    if (currentThemeIndex < themes.length - 1) {
+        currentThemeIndex++;
+        updateContent();
+    }
+});
+
+// Função para alternar a ordem do menu
+function toggleMenuOrder() {
+    const themeList = document.getElementById("theme-list");
+    const items = Array.from(themeList.children);
+    items.reverse().forEach(item => themeList.appendChild(item));
+}
+
+// Adicionando um botão para alternar a ordem do menu
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleOrderButton = document.createElement("button");
+    toggleOrderButton.textContent = "Alternar Ordem do Menu";
+    toggleOrderButton.style.position = "fixed";
+    toggleOrderButton.style.top = "60px";
+    toggleOrderButton.style.right = "20px";
+    toggleOrderButton.style.zIndex = "1001";
+    toggleOrderButton.style.padding = "10px";
+    toggleOrderButton.style.backgroundColor = "#ff6f00";
+    toggleOrderButton.style.color = "white";
+    toggleOrderButton.style.border = "none";
+    toggleOrderButton.style.borderRadius = "5px";
+    toggleOrderButton.style.cursor = "pointer";
+    toggleOrderButton.addEventListener("click", toggleMenuOrder);
+
+    document.body.appendChild(toggleOrderButton);
+});
+
+// Inicializando a página com o primeiro tema
+updateContent();
